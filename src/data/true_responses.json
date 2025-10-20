@@ -1,7 +1,17 @@
 [
-    "Correct!",
-    "Well done!",
-    "That's right!",
-    "Great job!",
-    "You got it!"
+  {
+    "title": "First true Article",
+    "summary": "This is the first true article",
+    "category": "sport"
+  },
+  {
+    "title": "Second true Article",
+    "summary": "This is the second true article",
+    "category": "sport"
+  },
+  {
+    "title": "Third true Article",
+    "summary": "This is the third true article",
+    "category": "history"
+  }
 ]

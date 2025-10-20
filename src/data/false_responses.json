@@ -1,0 +1,17 @@
+[
+  {
+    "title": "First false Article",
+    "summary": "This is the first false article",
+    "category": "sport"
+  },
+  {
+    "title": "Second false Article",
+    "summary": "This is the second false article",
+    "category": "sport"
+  },
+  {
+    "title": "Third false Article",
+    "summary": "This is the third false article",
+    "category": "history"
+  }
+]
