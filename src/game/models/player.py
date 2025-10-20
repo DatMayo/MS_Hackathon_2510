@@ -1,4 +1,4 @@
 # Player model definition
-class Player:
+class PlayerModel:
     name: str
     score: int
