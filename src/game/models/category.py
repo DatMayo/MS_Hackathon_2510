@@ -1,0 +1,2 @@
+class CategoryModel:
+    name: str
