@@ -1,19 +1,26 @@
 from src.config.settings import WIKI_MAX_DISPLAYED_CATEGORIES
 from src.game.classes.category import Category
-from src.game.models.article import ArticleModel
-from src.game.models.category import CategoryModel
 
 
 class GameUI:
     @staticmethod
     def draw_welcome():
         print("Welcome to TruthPedia!\n")
+        pass
 
     @staticmethod
     def get_player_name():
         user_name = input("So tell me, what's your name? ")
         print(f"Hello {user_name}!")
         return user_name
+
+    """@staticmethod
+    def get_player_rounds():
+        print(f"Okay {name}! I assume you are ready to test your wits!")
+        #sleep(2)                                                   Time delay from the "time" dictionary
+        round_count = int(input("How many rounds do you wanna play? "))
+        return round_count
+    """
 
     @staticmethod
     def print_basic_info():
@@ -23,44 +30,36 @@ class GameUI:
             "1 out of the 3 is an imposter.\n"
             "Are you smart enough to identify it?\n"
         )
+        pass
 
     @staticmethod
     def print_game_over(user_name: str):
         print(f"Well {user_name}, you are pretty brainwashed...\n" "You lost!")
+        pass
 
     @staticmethod
-    def print_random_categories(
-        category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES,
-    ) -> list[CategoryModel]:
-        category_list: list[CategoryModel] = []
+    def print_random_categories(category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES):
+        category_list = []
         print("Here you have your choices:")
-
-        while len(category_list) < category_count:
-            random_cat = Category.get_random_category()
-            if random_cat not in category_list:
-                category_list.append(random_cat)
-                print(f"{len(category_list)}) {random_cat.name}")
-
+        for i in range(category_count):
+            category_list.append(Category.get_random_category())
+            print(f"{i+1}) {category_list[i]}")
         return category_list
 
     @staticmethod
-    def get_user_category(category_list: list[CategoryModel]) -> CategoryModel:
-        # ToDo: Check if user_selection is int
+    def print_question(category_list):
         user_selection = int(
-            input("\nChoose wisely... In which category do you wanna test your wits? ")
-        )
-
-        if user_selection < 1 or user_selection > len(category_list):
-            print(
-                "FAKENEWS: Please enter a valid number between 1 and {WIKI_MAX_DISPLAYED_CATEGORIES}"
+            input(
+                "In which category do you wanna test your wits?\n" "Choose wisely...\n"
             )
-            return GameUI.get_user_category(category_list)
-
+        )
+        if user_selection < 1 or user_selection > len(category_list):
+            raise IndexError
         print(
-            f"So you chose {category_list[user_selection - 1].name}...\n"
+            f"So you chose {category_list[user_selection - 1]}...\n"
             f"Indeed a wise choice!"
         )
-        return category_list[user_selection - 1]
+        return user_selection
 
     # TODO: change 'summaries' argument to specified argument
 
@@ -88,10 +87,4 @@ class GameUI:
             print("Correct!")
         else:
             print("Wrong!\n" "No points for you. Try again!")
-
-    @staticmethod
-    def print_articles(my_articles: list[ArticleModel]):
-        for i, article in enumerate(my_articles):
-            print(f"\nArticle No.{i + 1}\n")
-            print(f"{article['title']}\n")
-            print(f"{article['summary']}\n")
+        pass

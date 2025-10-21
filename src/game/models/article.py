@@ -1,5 +1,5 @@
 # Question model definition
-class QuestionModel:
+class ArticleModel:
     title: str
     summary: str
     category: str

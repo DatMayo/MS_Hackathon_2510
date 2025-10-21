@@ -1,11 +1,13 @@
 import random
 from itertools import count
 
-from src.game.models.question import QuestionModel
+from src.game.models.category import CategoryModel
+from src.game.models.article import ArticleModel
 import json
 
+
 class ArticlesLocal:
-    local_articles: list[QuestionModel] = []
+    local_articles: list[ArticleModel] = []
 
     @staticmethod
     def load_articles() -> bool:
@@ -19,7 +21,7 @@ class ArticlesLocal:
             with open("../../data/responses.json", "r", encoding="utf-8") as file:
                 data = json.load(file)
                 for article in data:
-                    current_artice: QuestionModel = article
+                    current_artice: ArticleModel = article
                     ArticlesLocal.local_articles.append(current_artice)
                 return True
         except Exception as e:
@@ -27,7 +29,7 @@ class ArticlesLocal:
             return False
 
     @staticmethod
-    def get_random_article(is_truth: bool, category: str):
+    def get_random_article(category: CategoryModel, is_truth: bool):
         """
         Returns a random article from the list of local articles, filtered by the given is_truth and category parameters.
 
@@ -36,15 +38,15 @@ class ArticlesLocal:
             category (str): The category of the article.
 
         Returns:
-            QuestionModel: A random article from the list of local articles, filtered by the given is_truth and category parameters.
+            ArticleModel: A random article from the list of local articles, filtered by the given is_truth and category parameters.
         """
         if count(ArticlesLocal.local_articles == 0):
             ArticlesLocal.load_articles()
 
         # Generate a new list and filter truth and category
-        filtered_list: list[QuestionModel] = []
+        filtered_list: list[ArticleModel] = []
         for article in ArticlesLocal.local_articles:
-            if article['is_truth'] == is_truth and article['category'] == category:
+            if article["is_truth"] == is_truth and article["category"] == category.name:
                 filtered_list.append(article)
 
         return random.choice(filtered_list)

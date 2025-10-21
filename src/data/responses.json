@@ -1,39 +1,243 @@
 [
   {
-    "title": "First false Article",
+    "title": "Urban_legends",
     "summary": "This is the first false article",
     "category": "sport",
     "is_truth": false
 
   },
   {
-    "title": "Second false Article",
+    "title": "Conspiracy_theories",
     "summary": "This is the second false article",
     "category": "sport",
     "is_truth": false
   },
   {
-    "title": "Third false Article",
+    "title": "Hoaxes",
     "summary": "This is the third false article",
     "category": "history",
     "is_truth": false
   },
   {
-    "title": "First true Article",
-    "summary": "This is the first true article",
+    "title": "Internet_memes",
+    "summary": "The 2012 phenomenon was a range of eschatological beliefs that cataclysmic or transformative events would occur on or around 21 December 2012.[1][2][3] This date was regarded as the end-date of a 5,126-year-long cycle in the Mesoamerican Long Count calendar,[4] and festivities took place on 21 December 2012 to commemorate the event in the countries that were part of the Maya civilization (Mexico, Belize, Guatemala, Honduras and El Salvador), with main events at Chichén Itzá in Mexico and Tikal in Guatemala.[5][6][7]\n\nVarious astronomical alignments and numerological formulae were proposed for this date. A New Age interpretation held that the date marked the start of a period during which Earth and its inhabitants would undergo a positive physical or spiritual transformation, and that 21 December 2012 would mark the beginning of a new era.[8] Others suggested that the date marked the end of the world or a similar catastrophe. Scenarios suggested for the end of the world included the arrival of the next solar maximum; an interaction between Earth and Sagittarius A*, the supermassive black hole at the center of the Milky Way galaxy;[9] the Nibiru cataclysm, in which Earth would collide with a mythical planet called Nibiru; or even the heating of Earth's core.\n\nScholars from various disciplines quickly dismissed predictions of cataclysmic events as they arose. Mayan scholars stated that no classic Mayan accounts forecast impending doom, and the idea that the Long Count calendar ends in 2012 misrepresented Mayan history and culture.[10][11][12] Astronomers rejected the various proposed doomsday scenarios as pseudoscience,[13][14] having been refuted by elementary astronomical observations.[15]",
     "category": "sport",
     "is_truth": true
   },
   {
-    "title": "Second true Article",
-    "summary": "This is the second true article",
-    "category": "sport",
-    "is_truth": true
-  },
-  {
-    "title": "Third true Article",
+    "title": "Alien implants",
     "summary": "This is the third true article",
-    "category": "history",
+    "category": "Alien_abduction",
     "is_truth": true
-  }
+  },
+  {
+    "title": "Alien implants",
+    "summary": "In ufology, alien implants is a term used to describe physical objects allegedly placed in someone's body after they have been abducted by aliens. Claimed capabilities of the implants range from telepresence to mind control to biotelemetry (the latter akin to humans tagging wild animals for study). As with UFO subjects in general, the idea of \"alien implants\" has seen very little attention from mainstream scientists.",
+    "category": "Alien_abduction",
+    "is_truth": true
+  },
+  {
+  "title": "Cryptids",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Third true Article",
+  "summary": "This is the third true article",
+  "category": "history",
+  "is_truth": true
+}
 ]
