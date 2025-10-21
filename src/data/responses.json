@@ -1,7 +1,7 @@
 [
   {
     "title": "Rumor",
-    "summary": "A rumor (American English), or rumour (British English; see spelling differences; derived from Latin rumorem 'noise'), is an unverified piece of information circulating among people, especially without solid evidence. In the social sciences, a rumor involves a form of a statement whose truthfulness or honesty is not quickly or ever confirmed. In addition, some scholars have identified rumor as a subset of propaganda. Sociology, psychology, and communication studies have widely varying definitions of rumor. Rumors are also often discussed with regard to misinformation and disinformation (the former often seen as simply false and the latter seen as deliberately false, though usually from a government source given to the media or a foreign government).",
+    "summary": "A rumor American English, or rumour British English; see spelling differences; derived from Latin rumorem 'noise'), is an unverified piece of information circulating among people, especially without solid evidence. In the social sciences, a rumor involves a form of a statement whose truthfulness or honesty is not quickly or ever confirmed. In addition, some scholars have identified rumor as a subset of propaganda. Sociology, psychology, and communication studies have widely varying definitions of rumor. Rumors are also often discussed with regard to misinformation and disinformation (the former often seen as simply false and the latter seen as deliberately false, though usually from a government source given to the media or a foreign government).",
     "category": "Urban_legends",
     "is_truth": false
   },
@@ -36,14 +36,14 @@
     "is_truth": true
   },
   {
-  "title": "Paranormal",
-  "summary": "This is the third true article",
+  "title": "Money Longer",
+  "summary": "Money Longer is the debut single by American rapper Lil Uzi Vert. It was released for digital download on February 6, 2016, as the first single from their third mixtape Lil Uzi Vert vs. the World, and as a bonus track from Japanese versions of their debut album Luv is Rage 2, by Generation Now and Atlantic Records. The whole song focuses on the idea that Lil Uzi Vert has now turn into a savage as is repeated throughout the song. The song was produced by Philadelphia-based record producers Don Cannon and Maaly Raw.",
   "category": "Internet_memes",
   "is_truth": true
   },
   {
-  "title": "UFO_sightings",
-  "summary": "This is the third true article",
+  "title": "The Lick",
+  "summary": "The Lick is a lick a stock musical phrase that has been used in numerous jazz and pop songs and several classical compositions, to the point that it has been described as the most famous jazz cliché ever. In recent years, it has become an internet meme and is often used for comedic effect.",
   "category": "Internet_memes",
   "is_truth": true
   },
@@ -74,169 +74,169 @@
   {
   "title": "Fringe_theories",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Paranormal",
   "is_truth": true
   },
   {
   "title": "Mass_psychogenic_illness",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Paranormal",
   "is_truth": true
   },
   {
   "title": "April_Fools%27_Day",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "UFO_sightings",
   "is_truth": true
   },
   {
   "title": "Lists_of_reportedly_haunted_locations",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "UFO_sightings",
   "is_truth": true
   },
   {
   "title": "New_religious_movements",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Alien_abduction",
   "is_truth": true
   },
   {
   "title": "Doomsday_scenarios",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Alien_abduction",
   "is_truth": true
   },
   {
   "title": "Fake_news",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Occult",
   "is_truth": true
   },
   {
   "title": "Prophecy",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Occult",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Alternative_medicine",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Alternative_medicine",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Pseudoscience",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Pseudoscience",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Fringe_theories",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Fringe_theories",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Mass_psychogenic_illness",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Mass_psychogenic_illness",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "April_Fools%27_Day",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "April_Fools%27_Day",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Lists_of_reportedly_haunted_locations",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Lists_of_reportedly_haunted_locations",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "New_religious_movements",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "New_religious_movements",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Doomsday_scenarios",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Doomsday_scenarios",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Fake_news",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Fake_news",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Prophecy",
   "is_truth": true
   },
   {
   "title": "Third true Article",
   "summary": "This is the third true article",
-  "category": "history",
+  "category": "Prophecy",
   "is_truth": true
 }
 ]
