@@ -1,3 +1,4 @@
+import random
 from src.config.settings import WIKI_MAX_DISPLAYED_CATEGORIES
 from src.game.classes.category import Category
 from src.game.models.article import ArticleModel
@@ -26,7 +27,7 @@ class GameUI:
 
     @staticmethod
     def print_game_over(user_name: str):
-        print(f"Well {user_name}, you are pretty brainwashed...\n" "You lost!")
+        print(f"Well {user_name}, you are pretty brainwashed...\n" "You've lost!")
 
     @staticmethod
     def print_random_categories(
@@ -76,24 +77,18 @@ class GameUI:
         return summaries
 
     @staticmethod
-    def get_user_answer(user_input):
-
-        
-
-        """
+    def get_user_answer() -> int:
         user_answer = int(input("Choose the Fakenews!\n" "Your answer: "))
-        if user_answer < 1 or user_answer > len(summaries):
-            raise IndexError
+        if user_answer < 1 or user_answer > 3:
+            print("FAKENEWS: Please enter a valid number between 1 and 3")
+            return GameUI.get_user_answer()
         return user_answer
-        """
 
     @staticmethod
-    def check_answer(user_answer, score_count):
-        if user_answer is False:
-            score_count += 1
-            print("Correct!")
-        else:
-            print("Wrong!\n" "No points for you. Try again!")
+    def check_answer(article: ArticleModel):
+        if not article['is_truth']:
+            return True
+        return False
 
     @staticmethod
     def print_articles(my_articles: list[ArticleModel]):
@@ -110,3 +105,34 @@ class GameUI:
             print(f"\nArticle No.{i + 1}\n")
             print(f"{article['title']}\n")
             print(f"{article['summary']}\n")
+
+    @staticmethod
+    def print_answer_correct(user_name: str):
+        trump_praise = [
+            f"TRUMPMENDOUS! {user_name}, you found the fake — nobody finds fakes better than you, believe me.",
+            f"YUGE win, {user_name}! Correct answer. The other options? Total disasters.",
+            f"Incredible job, {user_name}! Many people are saying this is the best guess they've ever seen."
+        ]
+
+        trump_inform = [
+            f'Fifteen seconds and we’re right back—next round’s going to be huge, believe me.',
+            f'Give it 15 seconds—then we hit the next round. People say it’s going to be incredible.',
+            f'15 seconds and we roll again. Many, many people are saying it’ll be the best yet.'
+        ]
+
+        print(random.choice(trump_praise))
+        print(random.choice(trump_inform))
+
+    @staticmethod
+    def print_user_won(user_name):
+        trump_praise = [
+            f'Huge win {user_name}. Almost as good as mine. Almost.',
+            f'Tremendous job {user_name}. Everyone’s talking. Mostly about me—and you.',
+            f'You won {user_name}. Big league. The best—besides me, of course.',
+            f'Legendary finish {user_name}. People are amazed. I’m impressed. That’s rare.',
+            f'Victory! Massive. You and I—real winners. The best.'
+        ]
+
+        print(random.choice(trump_praise))
+
+
