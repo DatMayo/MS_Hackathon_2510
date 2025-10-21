@@ -27,7 +27,7 @@ class GameUI:
         print("This game is about guessing the imposter summary.\n"
               "You will choose a category and get 3 summaries of random pages.\n"
               "1 out of the 3 is an imposter.\n"
-              "Are you smart enough to identify it?")
+              "Are you smart enough to identify it?\n")
         pass
 
     @staticmethod
