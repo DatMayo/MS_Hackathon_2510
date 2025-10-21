@@ -58,7 +58,8 @@ class GameUI:
 
         print(
             f"So you chose {category_list[user_selection - 1].name}...\n"
-            f"Indeed a wise choice!"
+            f"Indeed a wise choice! We'll prepare the summaries now...\n"
+            f"Please wait... (eta: 15 seconds)"
         )
         return category_list[user_selection - 1]
 
@@ -75,11 +76,16 @@ class GameUI:
         return summaries
 
     @staticmethod
-    def get_user_answer(summaries):
+    def get_user_answer(user_input):
+
+        
+
+        """
         user_answer = int(input("Choose the Fakenews!\n" "Your answer: "))
         if user_answer < 1 or user_answer > len(summaries):
             raise IndexError
         return user_answer
+        """
 
     @staticmethod
     def check_answer(user_answer, score_count):
@@ -91,6 +97,15 @@ class GameUI:
 
     @staticmethod
     def print_articles(my_articles: list[ArticleModel]):
+        """
+        Prints out the articles in the given list.
+
+        Args:
+            my_articles (list[ArticleModel]): A list of articles to be printed.
+
+        Returns:
+            None
+        """
         for i, article in enumerate(my_articles):
             print(f"\nArticle No.{i + 1}\n")
             print(f"{article['title']}\n")

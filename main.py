@@ -14,17 +14,17 @@ def main():
     # name = GameUI.get_player_name()
     user_choice_category = GameUI.print_random_categories()
     user_selected_category = GameUI.get_user_category(user_choice_category)
+    ai_article = FakeNewsGenerator.generate(user_selected_category.name)
 
-    # Basti:
     articles: list[ArticleModel] = []
     for article in range(2):
         articles.append(ArticleWiki.get_random_article(user_selected_category))
 
+    articles.append(ai_article)
     GameUI.print_articles(articles)
 
     #Walter testing
-    print(f"AI Title, Summary:{FakeNewsGenerator.generate(user_selected_category.name)}")
-
+    # print(f"AI Title, Summary:{FakeNewsGenerator.generate(user_selected_category.name)}")
 
 
 if __name__ == "__main__":

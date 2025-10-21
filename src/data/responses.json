@@ -1,15 +1,14 @@
 [
   {
-    "title": "Urban_legends",
-    "summary": "This is the first false article",
-    "category": "sport",
+    "title": "Rumor",
+    "summary": "A rumor (American English), or rumour (British English; see spelling differences; derived from Latin rumorem 'noise'), is an unverified piece of information circulating among people, especially without solid evidence. In the social sciences, a rumor involves a form of a statement whose truthfulness or honesty is not quickly or ever confirmed. In addition, some scholars have identified rumor as a subset of propaganda. Sociology, psychology, and communication studies have widely varying definitions of rumor. Rumors are also often discussed with regard to misinformation and disinformation (the former often seen as simply false and the latter seen as deliberately false, though usually from a government source given to the media or a foreign government)."
+    "category": "Urban_legends",
     "is_truth": false
-
   },
   {
     "title": "Conspiracy_theories",
     "summary": "This is the second false article",
-    "category": "sport",
+    "category": "Urban_legends",
     "is_truth": false
   },
   {
@@ -25,97 +24,97 @@
     "is_truth": true
   },
   {
-    "title": "Alien implants",
+    "title": "Cryptids",
     "summary": "This is the third true article",
     "category": "Alien_abduction",
     "is_truth": true
   },
   {
-    "title": "Alien implants",
+    "title": "Secret_societies",
     "summary": "In ufology, alien implants is a term used to describe physical objects allegedly placed in someone's body after they have been abducted by aliens. Claimed capabilities of the implants range from telepresence to mind control to biotelemetry (the latter akin to humans tagging wild animals for study). As with UFO subjects in general, the idea of \"alien implants\" has seen very little attention from mainstream scientists.",
     "category": "Alien_abduction",
     "is_truth": true
   },
   {
-  "title": "Cryptids",
+  "title": "Paranormal",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "UFO_sightings",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Alien implants",
+  "summary": "In ufology, alien implants is a term used to describe physical objects allegedly placed in someone's body after they have been abducted by aliens. Claimed capabilities of the implants range from telepresence to mind control to biotelemetry (the latter akin to humans tagging wild animals for study). As with UFO subjects in general, the idea of \"alien implants\" has seen very little attention from mainstream scientists.",
+  "category": "history",
+  "is_truth": true
+  },
+  {
+  "title": "Occult",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Alternative_medicine",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Pseudoscience",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Fringe_theories",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Mass_psychogenic_illness",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "April_Fools%27_Day",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Lists_of_reportedly_haunted_locations",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "New_religious_movements",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Doomsday_scenarios",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
+  "title": "Fake_news",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
   },
   {
-  "title": "Third true Article",
-  "summary": "This is the third true article",
-  "category": "history",
-  "is_truth": true
-  },
-  {
-  "title": "Third true Article",
+  "title": "Prophecy",
   "summary": "This is the third true article",
   "category": "history",
   "is_truth": true
