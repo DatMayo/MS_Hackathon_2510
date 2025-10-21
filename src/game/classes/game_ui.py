@@ -7,17 +7,17 @@ from src.game.models.category import CategoryModel
 
 class GameUI:
     @staticmethod
-    def draw_welcome():
+    def draw_welcome() -> None:
         print("Welcome to TruthPedia!\n")
 
     @staticmethod
-    def get_player_name():
+    def get_player_name() -> str:
         user_name = input("So tell me, what's your name? ")
         print(f"Hello {user_name}!")
         return user_name
 
     @staticmethod
-    def print_basic_info():
+    def print_basic_info() -> None:
         print(
             "This game is about guessing the imposter summary.\n"
             "You will choose a category and get 3 summaries of random pages.\n"
@@ -26,7 +26,7 @@ class GameUI:
         )
 
     @staticmethod
-    def print_game_over(user_name: str):
+    def print_game_over(user_name: str) -> str:
         print(f"Well {user_name}, you are pretty brainwashed...\n" "You've lost!")
 
     @staticmethod
@@ -64,18 +64,6 @@ class GameUI:
         )
         return category_list[user_selection - 1]
 
-    # TODO: change 'summaries' argument to specified argument
-
-    @staticmethod
-    def get_summaries(summaries):
-        pass
-
-    @staticmethod
-    def print_summaries(summaries):
-        for i in range(len(summaries)):
-            print(f"{i+1}) {summaries[i]}")
-        return summaries
-
     @staticmethod
     def get_user_answer() -> int:
         user_answer = int(input("Choose the Fakenews!\n" "Your answer: "))
@@ -85,13 +73,11 @@ class GameUI:
         return user_answer
 
     @staticmethod
-    def check_answer(article: ArticleModel):
-        if not article['is_truth']:
-            return True
-        return False
+    def check_answer(article: ArticleModel) -> bool:
+        return not article["is_truth"]
 
     @staticmethod
-    def print_articles(my_articles: list[ArticleModel]):
+    def print_articles(my_articles: list[ArticleModel]) -> None:
         """
         Prints out the articles in the given list.
 
@@ -107,32 +93,30 @@ class GameUI:
             print(f"{article['summary']}\n")
 
     @staticmethod
-    def print_answer_correct(user_name: str):
+    def print_answer_correct(user_name: str) -> None:
         trump_praise = [
             f"TRUMPMENDOUS! {user_name}, you found the fake — nobody finds fakes better than you, believe me.",
             f"YUGE win, {user_name}! Correct answer. The other options? Total disasters.",
-            f"Incredible job, {user_name}! Many people are saying this is the best guess they've ever seen."
+            f"Incredible job, {user_name}! Many people are saying this is the best guess they've ever seen.",
         ]
 
         trump_inform = [
-            f'Fifteen seconds and we’re right back—next round’s going to be huge, believe me.',
-            f'Give it 15 seconds—then we hit the next round. People say it’s going to be incredible.',
-            f'15 seconds and we roll again. Many, many people are saying it’ll be the best yet.'
+            f"Fifteen seconds and we’re right back—next round’s going to be huge, believe me.",
+            f"Give it 15 seconds—then we hit the next round. People say it’s going to be incredible.",
+            f"15 seconds and we roll again. Many, many people are saying it’ll be the best yet.",
         ]
 
         print(random.choice(trump_praise))
         print(random.choice(trump_inform))
 
     @staticmethod
-    def print_user_won(user_name):
+    def print_user_won(user_name) -> None:
         trump_praise = [
-            f'Huge win {user_name}. Almost as good as mine. Almost.',
-            f'Tremendous job {user_name}. Everyone’s talking. Mostly about me—and you.',
-            f'You won {user_name}. Big league. The best—besides me, of course.',
-            f'Legendary finish {user_name}. People are amazed. I’m impressed. That’s rare.',
-            f'Victory! Massive. You and I—real winners. The best.'
+            f"Huge win {user_name}. Almost as good as mine. Almost.",
+            f"Tremendous job {user_name}. Everyone’s talking. Mostly about me—and you.",
+            f"You won {user_name}. Big league. The best—besides me, of course.",
+            f"Legendary finish {user_name}. People are amazed. I’m impressed. That’s rare.",
+            f"Victory! Massive. You and I—real winners. The best.",
         ]
 
         print(random.choice(trump_praise))
-
-
