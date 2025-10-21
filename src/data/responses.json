@@ -1,0 +1,39 @@
+[
+  {
+    "title": "First false Article",
+    "summary": "This is the first false article",
+    "category": "sport",
+    "is_truth": false
+
+  },
+  {
+    "title": "Second false Article",
+    "summary": "This is the second false article",
+    "category": "sport",
+    "is_truth": false
+  },
+  {
+    "title": "Third false Article",
+    "summary": "This is the third false article",
+    "category": "history",
+    "is_truth": false
+  },
+  {
+    "title": "First true Article",
+    "summary": "This is the first true article",
+    "category": "sport",
+    "is_truth": true
+  },
+  {
+    "title": "Second true Article",
+    "summary": "This is the second true article",
+    "category": "sport",
+    "is_truth": true
+  },
+  {
+    "title": "Third true Article",
+    "summary": "This is the third true article",
+    "category": "history",
+    "is_truth": true
+  }
+]
