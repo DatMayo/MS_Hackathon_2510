@@ -117,7 +117,7 @@ class GameUI:
 
         while len(category_list) < category_count:
             random_cat = Category.get_random_category()
-            if random_cat not in category_list:
+            if random_cat.name not in [cat.name for cat in category_list]:
                 category_list.append(random_cat)
                 print(f"{len(category_list)}) {random_cat.name}")
 
