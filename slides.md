@@ -1,87 +1,87 @@
-# Präsentation: TruthPedia - Die Fake News Detektion
+# Presentation: TruthPedia - The Fake News Detector
 
-## 1. Titel
+## 1. Title
 ```
-DIE ERDE
-UNENDLICHE FAKENEWS
-```
-
-## 2. Einführung
-```
-DIES SIND DIE ABENTEUER DER MASTERSCHOOL HACKATHON CLASS
-
-DIE ABENTEUER DER MASTERSCHOOL HACKATHON CLASS,
-DRINGT DABEI IN ARTIKEL VOR,
-DIE NOCH NIE EIN MENSCH ZUVOR GESEHEN HAT
+INFINITE FAKENEWS
 ```
 
-## 3. Die Mission
-**Fünf-Tage-Mission, fremde Welten zu erforschen, neues Leben und neue Zivilisationen...**
-
-*...oder zumindest neue Wege zu finden, um Fakt von Fiktion zu unterscheiden!*
-
-## 4. Unsere Reise beginnt
-**Tag 1: Die ersten Schritte**
-- Aufbau der Grundstruktur mit Python
-- Implementierung der Artikelklassen
-- Erste Wikipedia-Integration
-
-## 5. Die Herausforderung
-**Tag 2: Begegnung mit dem Unbekannten**
-- Umgang mit API-Limits
-- Kategorisierung der Artikel
-- Erste KI-generierte Fake News
-
-## 6. Die dunkle Seite der Macht
-**Tag 3: Die Macht der Täuschung**
-- Entwicklung der Spielmechanik
-- Integration von echten und gefälschten Artikeln
-- Erstellung der Benutzeroberfläche
-
-## 7. Neue Allianzen
-**Tag 4: Die Rettung der Galaxis**
-- Verbesserung der KI-Prompts
-- Erweiterung der Kategorien
-- Fehlerbehandlung und Stabilität
-
-## 8. Die letzte Grenze
-**Tag 5: Die Zukunft**
-- Fertigstellung der Kernfunktionalität
-- Dokumentation und Tests
-- Vorbereitung der Präsentation
-
-## 9. Unsere Errungenschaften
-- **KI-Integration**: OpenAI für überzeugende Fake News
-- **Wikipedia-Anbindung**: Echtzeit-Artikelabfrage
-- **Modulares Design**: Einfach erweiterbar
-- **Spaßfaktor**: Mit einer Prise Humor
-
-## 10. Live-Demo
-*Zeit für eine kleine Vorführung...* 🚀
-
-## 11. Die nächste Generation
-**Zukünftige Verbesserungen**
-- Erweiterte KI-Modelle
-- Mehr Kategorien und Artikel
-- Benutzerkonten und Bestenlisten
-- Mobile App-Version
-
-## 12. Fazit
+## 2. Introduction
 ```
-MUTIG DORTHIN ZU GEHEN,
-WO KEIN MENSCH ZUVOR GEWESEN IST...
+THESE ARE THE VOYAGES OF THE MASTERSCHOOL HACKATHON CLASS
 
-...AUßER WIR!
+THEIR CONTINUING MISSION:
+TO EXPLORE STRANGE NEW ARTICLES,
+TO SEEK OUT TRUTH AND MISINFORMATION,
+TO BOLDLY GO WHERE NO ONE HAS GONE BEFORE
 ```
 
-## 13. Danksagung
-- Unserem großartigen Team
-- Den Organisatoren des Hackathons
-- Wikipedia für die unendliche Weisheit
-- Und natürlich... der KI, die uns geholfen hat, sie zu fälschen! 😉
+## 3. The Mission
+**A five-day mission to explore strange new worlds, to seek out new life and new civilizations...**
 
-## 14. Fragen?
-*Wer jetzt noch weiß, was echt ist und was nicht, darf die Hand heben!* 🙋‍♂️
+*...or at least find new ways to tell fact from fiction!*
+
+## 4. Our Journey Begins
+**Day 1: First Steps**
+- Setting up the basic structure with Python
+- Implementing article classes
+- First Wikipedia integration
+
+## 5. The Challenge
+**Day 2: Encountering the Unknown**
+- Dealing with API limits
+- Categorizing articles
+- First AI-generated fake news
+
+## 6. The Dark Side of the Force
+**Day 3: The Power of Deception**
+- Developing game mechanics
+- Integrating real and fake articles
+- Creating the user interface
+
+## 7. New Alliances
+**Day 4: Saving the Galaxy**
+- Improving AI prompts
+- Expanding categories
+- Error handling and stability
+
+## 8. The Final Frontier
+**Day 5: The Future**
+- Completing core functionality
+- Documentation and testing
+- Preparing the presentation
+
+## 9. Our Achievements
+- **AI Integration**: OpenAI for convincing fake news
+- **Wikipedia Connection**: Real-time article queries
+- **Modular Design**: Easily expandable
+- **Fun Factor**: With a pinch of humor
+
+## 10. Live Demo
+*Time for a little demonstration...* 🚀
+
+## 11. The Next Generation
+**Future Improvements**
+- Advanced AI models
+- More categories and articles
+- User accounts and leaderboards
+- Mobile app version
+
+## 12. Conclusion
+```
+TO BOLDLY GO
+WHERE NO ONE HAS GONE BEFORE...
+
+...EXCEPT US!
+```
+
+## 13. Acknowledgments
+- Our amazing team
+- The hackathon organizers
+- Wikipedia for infinite wisdom
+- And of course... the AI that helped us fake it! 😉
+
+## 14. Questions?
+*If you still know what's real and what's not, raise your hand!* 🙋‍♂️
 
 ---
-*Präsentation erstellt mit ❤️ für den Masterschool Hackathon 2025*
+*Presentation created with ❤️ for the Masterschool Hackathon 2025*
