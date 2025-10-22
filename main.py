@@ -61,7 +61,7 @@ def main():
                         real_article = ArticleWiki.get_random_article(selected_category)
 
                         #Debug
-                        real_article = None
+                        # real_article = None
 
                         if real_article == "":
                             print(f"{Fore.YELLOW}Error: Failed to fetch real article from Wikipedia.")

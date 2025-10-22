@@ -38,7 +38,7 @@ class Category:
         "Fringe_theories",
         "Mass_psychogenic_illness",
         "April_Fools'_Day",
-        "Lists_of_reportedly_haunted_locations",
+        "Basketball",
         "New_religious_movements",
         "Doomsday_scenarios",
         "Fake_news",
