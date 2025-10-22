@@ -58,8 +58,20 @@ class FakeNewsGenerator:
                     {"role": "user", "content": user_prompt},
                 ],
                 temperature=1,
+                timeout=30,  # Add timeout for API calls
             )
+
+            if not response.choices or not response.choices[0].message.content:
+                print("Warning: Empty response from OpenAI API")
+                return None
+
             data = json.loads(response.choices[0].message.content)
+
+            # Validate required fields
+            if not data.get("title") or not data.get("summary"):
+                print("Warning: Incomplete response from OpenAI API - missing title or summary")
+                return None
+
             article: ArticleModel = {
                 "title": data.get("title"),
                 "summary": data.get("summary"),
@@ -67,6 +79,10 @@ class FakeNewsGenerator:
                 "is_truth": False,
             }
             return article
+
+        except json.JSONDecodeError as e:
+            print(f"Error: Failed to parse JSON response from OpenAI API: {e}")
+            return None
         except Exception as e:
             print(f"API Error: {e}")
             return None
@@ -90,9 +106,18 @@ class FakeNewsGenerator:
             ...     print(article['title'])
             ...     print(article['summary'])
         """
-        if not OPENAI_API_KEY:
-            print("Error: OPENAI_API_KEY not found.")
-            return None, None
+        # Input validation
+        if not category or not isinstance(category, str):
+            print("Error: Invalid category provided. Category must be a non-empty string.")
+            return None
 
-        client = OpenAI(api_key=OPENAI_API_KEY)
-        return FakeNewsGenerator._generate_from_api(client, category)
+        if not OPENAI_API_KEY:
+            print("Error: OPENAI_API_KEY not found. Please configure your OpenAI API key.")
+            return None
+
+        try:
+            client = OpenAI(api_key=OPENAI_API_KEY)
+            return FakeNewsGenerator._generate_from_api(client, category)
+        except Exception as e:
+            print(f"Error: Failed to initialize OpenAI client: {e}")
+            return None

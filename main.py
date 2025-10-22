@@ -1,6 +1,7 @@
 """
 Main entry point for the console-based quiz game.
 """
+import sys
 from src.config.settings import GAME_DEFAULT_ROUNDS
 from src.game.classes.game_ui import GameUI
 
@@ -10,36 +11,90 @@ from src.game.models.article import ArticleModel
 
 
 def main():
-    GameUI.draw_welcome()
-    GameUI.print_basic_info()
-    user_name = GameUI.get_player_name()
-    user_choice_category = GameUI.print_random_categories()
-    user_selected_category = GameUI.get_user_category(user_choice_category)
-    current_round = 0
-    while current_round <= GAME_DEFAULT_ROUNDS:
-        ai_article = FakeNewsGenerator.generate(user_selected_category.name)
+    """
+    Main game loop with comprehensive error handling.
 
-        articles: list[ArticleModel] = []
-        for article in range(2):
-            articles.append(ArticleWiki.get_random_article(user_selected_category))
+    This function runs the complete game flow, handling various potential errors
+    that might occur during gameplay, API calls, or user interactions.
+    """
+    try:
+        # Initialize game
+        GameUI.draw_welcome()
+        GameUI.print_basic_info()
 
-        articles.append(ai_article)
-        GameUI.print_articles(articles)
-        user_answer =  GameUI.get_user_answer()
-        user_answer_correct = GameUI.check_answer(articles[user_answer - 1])
-        if user_answer_correct is False:
-            GameUI.print_game_over(user_name)
-            break
+        # Get player information
+        user_name = GameUI.get_player_name()
 
-        current_round += 1
-        if current_round < GAME_DEFAULT_ROUNDS:
-            GameUI.print_answer_correct(user_name)
-    GameUI.print_user_won(user_name)
+        # Get and select category
+        category_list = GameUI.print_random_categories()
+        selected_category = GameUI.get_user_category(category_list)
 
+        # Main game loop
+        current_round = 0
+        while current_round < GAME_DEFAULT_ROUNDS:
+            try:
+                # Generate AI fake article
+                ai_article = FakeNewsGenerator.generate(selected_category.name)
+                if not ai_article:
+                    print("Error: Failed to generate fake article. Skipping round.")
+                    continue
 
+                # Get real articles from Wikipedia
+                articles: list[ArticleModel] = []
+                for attempt in range(2):
+                    try:
+                        real_article = ArticleWiki.get_random_article(selected_category)
+                        articles.append(real_article)
+                    except (ValueError, ConnectionError) as e:
+                        print(f"Warning: Failed to fetch real article (attempt {attempt + 1}): {e}")
+                        if attempt == 1:  # Last attempt
+                            print("Error: Unable to fetch real articles. Ending game.")
+                            return
 
-    #Walter testing
-    # print(f"AI Title, Summary:{FakeNewsGenerator.generate(user_selected_category.name)}")
+                # Add fake article
+                articles.append(ai_article)
+
+                # Display articles and get user answer
+                GameUI.print_articles(articles)
+                user_answer = GameUI.get_user_answer()
+
+                # Check answer
+                if user_answer < 1 or user_answer > len(articles):
+                    print(f"Error: Invalid answer. Please select a number between 1 and {len(articles)}")
+                    continue
+
+                user_answer_correct = GameUI.check_answer(articles[user_answer - 1])
+
+                if not user_answer_correct:
+                    GameUI.print_game_over(user_name)
+                    return
+
+                current_round += 1
+
+                # Show success message if not the last round
+                if current_round < GAME_DEFAULT_ROUNDS:
+                    GameUI.print_answer_correct(user_name)
+
+            except (ValueError, IndexError) as e:
+                print(f"Error in round {current_round + 1}: {e}")
+                print("Skipping this round and continuing...")
+                current_round += 1
+                continue
+            except Exception as e:
+                print(f"Unexpected error in round {current_round + 1}: {e}")
+                print("Ending game due to unexpected error.")
+                return
+
+        # Game completed successfully
+        if current_round >= GAME_DEFAULT_ROUNDS:
+            GameUI.print_user_won(user_name)
+
+    except KeyboardInterrupt:
+        print("\n\nGame interrupted by user. Goodbye!")
+    except Exception as e:
+        print(f"Unexpected error starting game: {e}")
+        print("Please check your configuration and try again.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

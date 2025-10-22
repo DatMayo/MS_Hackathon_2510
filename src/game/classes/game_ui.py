@@ -1,5 +1,6 @@
 import random
-from src.config.settings import WIKI_MAX_DISPLAYED_CATEGORIES
+import textwrap
+from src.config.settings import WIKI_MAX_DISPLAYED_CATEGORIES, CONSOLE_WIDTH
 from src.game.classes.category import Category
 from src.game.models.article import ArticleModel
 from src.game.models.category import CategoryModel
@@ -7,17 +8,55 @@ from src.game.models.category import CategoryModel
 
 class GameUI:
     @staticmethod
+    def _wrap_text(text: str, width: int = None) -> str:
+        """
+        Wrap text to fit within console width.
+
+        Args:
+            text: The text to wrap.
+            width: The width to wrap to. If None, uses CONSOLE_WIDTH.
+
+        Returns:
+            str: The wrapped text.
+        """
+        if width is None:
+            width = CONSOLE_WIDTH
+        return textwrap.fill(text, width=width - 4)  # -4 for indentation
+
+    @staticmethod
     def draw_welcome() -> None:
         print("Welcome to TruthPedia!\n")
 
     @staticmethod
     def get_player_name() -> str:
-        user_name = input("So tell me, what's your name? ")
-        print(f"Hello {user_name}!")
-        return user_name
+        """
+        Get the player's name from user input.
+
+        Returns:
+            str: The player's name.
+
+        Raises:
+            KeyboardInterrupt: If the user interrupts the input.
+            EOFError: If the input stream ends unexpectedly.
+        """
+        try:
+            user_name = input("So tell me, what's your name? ").strip()
+            if not user_name:
+                print("Please enter a valid name.")
+                return GameUI.get_player_name()
+            print(f"Hello {user_name}!")
+            return user_name
+        except (KeyboardInterrupt, EOFError):
+            print("\nGoodbye!")
+            exit(0)
 
     @staticmethod
     def print_basic_info() -> None:
+        """
+        Display basic information about the game.
+
+        This method shows the player what the game is about and how to play.
+        """
         print(
             "This game is about guessing the imposter summary.\n"
             "You will choose a category and get 3 summaries of random pages.\n"
@@ -27,12 +66,35 @@ class GameUI:
 
     @staticmethod
     def print_game_over(user_name: str) -> str:
-        print(f"Well {user_name}, you are pretty brainwashed...\n" "You've lost!")
+        """
+        Display game over message when player loses.
+
+        Args:
+            user_name: The name of the player who lost.
+
+        Returns:
+            str: The game over message (for potential future use).
+        """
+        message = f"Well {user_name}, you are pretty brainwashed...\nYou've lost!"
+        print(message)
+        return message
 
     @staticmethod
     def print_random_categories(
         category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES,
     ) -> list[CategoryModel]:
+        """
+        Display and return a list of random categories for the player to choose from.
+
+        Args:
+            category_count: The number of categories to display. Defaults to WIKI_MAX_DISPLAYED_CATEGORIES.
+
+        Returns:
+            list[CategoryModel]: A list of randomly selected categories.
+
+        Note:
+            Categories are selected without replacement to ensure variety.
+        """
         category_list: list[CategoryModel] = []
         print("Here you have your choices:")
 
@@ -46,54 +108,168 @@ class GameUI:
 
     @staticmethod
     def get_user_category(category_list: list[CategoryModel]) -> CategoryModel:
-        # ToDo: Check if user_selection is int
-        user_selection = int(
-            input("\nChoose wisely... In which category do you wanna test your wits? ")
-        )
+        """
+        Get the user's category selection.
 
-        if user_selection < 1 or user_selection > len(category_list):
-            print(
-                "FAKENEWS: Please enter a valid number between 1 and {WIKI_MAX_DISPLAYED_CATEGORIES}"
-            )
-            return GameUI.get_user_category(category_list)
+        Args:
+            category_list: List of available categories.
 
-        print(
-            f"So you chose {category_list[user_selection - 1].name}...\n"
-            f"Indeed a wise choice! We'll prepare the summaries now...\n"
-            f"Please wait... (eta: 15 seconds)"
-        )
-        return category_list[user_selection - 1]
+        Returns:
+            CategoryModel: The selected category.
+
+        Raises:
+            ValueError: If input is invalid or category list is empty.
+            KeyboardInterrupt: If the user interrupts the input.
+            EOFError: If the input stream ends unexpectedly.
+        """
+        if not category_list:
+            raise ValueError("No categories available for selection.")
+
+        try:
+            while True:
+                user_input = input("\nChoose wisely... In which category do you wanna test your wits? ").strip()
+
+                if not user_input:
+                    print("Please enter a number.")
+                    continue
+
+                try:
+                    user_selection = int(user_input)
+                except ValueError:
+                    print(f"Please enter a valid number between 1 and {len(category_list)}")
+                    continue
+
+                if user_selection < 1 or user_selection > len(category_list):
+                    print(f"Please enter a valid number between 1 and {len(category_list)}")
+                    continue
+
+                selected_category = category_list[user_selection - 1]
+                print(
+                    f"So you chose {selected_category.name}...\n"
+                    f"Indeed a wise choice! We'll prepare the summaries now...\n"
+                    f"Please wait... (eta: 15 seconds)"
+                )
+                return selected_category
+
+        except (KeyboardInterrupt, EOFError):
+            print("\nGoodbye!")
+            exit(0)
 
     @staticmethod
     def get_user_answer() -> int:
-        user_answer = int(input("Choose the Fakenews!\n" "Your answer: "))
-        if user_answer < 1 or user_answer > 3:
-            print("FAKENEWS: Please enter a valid number between 1 and 3")
-            return GameUI.get_user_answer()
-        return user_answer
+        """
+        Get the user's answer choice.
+
+        Returns:
+            int: The user's answer (1, 2, or 3).
+
+        Raises:
+            ValueError: If input is invalid.
+            KeyboardInterrupt: If the user interrupts the input.
+            EOFError: If the input stream ends unexpectedly.
+        """
+        try:
+            while True:
+                user_input = input("Choose the Fakenews!\nYour answer: ").strip()
+
+                if not user_input:
+                    print("Please enter a number.")
+                    continue
+
+                try:
+                    user_answer = int(user_input)
+                except ValueError:
+                    print("Please enter a valid number between 1 and 3")
+                    continue
+
+                if user_answer < 1 or user_answer > 3:
+                    print("Please enter a valid number between 1 and 3")
+                    continue
+
+                return user_answer
+
+        except (KeyboardInterrupt, EOFError):
+            print("\nGoodbye!")
+            exit(0)
 
     @staticmethod
     def check_answer(article: ArticleModel) -> bool:
+        """
+        Check if the given article is fake news.
+
+        Args:
+            article: The article to check.
+
+        Returns:
+            bool: True if the article is fake news, False if it's real.
+
+        Raises:
+            ValueError: If the article doesn't have the required 'is_truth' field.
+        """
+        if not isinstance(article, dict) or 'is_truth' not in article:
+            raise ValueError("Invalid article provided. Article must be a dictionary with 'is_truth' field.")
+
         return not article["is_truth"]
 
     @staticmethod
     def print_articles(my_articles: list[ArticleModel]) -> None:
         """
-        Prints out the articles in the given list.
+        Prints out the articles in the given list with text wrapping for better readability.
 
         Args:
             my_articles (list[ArticleModel]): A list of articles to be printed.
 
         Returns:
             None
+
+        Raises:
+            ValueError: If the input is not a list or if articles are invalid.
         """
+        if not isinstance(my_articles, list):
+            raise ValueError("Articles must be provided as a list.")
+
+        if not my_articles:
+            print("No articles to display.")
+            return
+
+        # Set console width (typical terminal width)
+        console_width = CONSOLE_WIDTH
+
         for i, article in enumerate(my_articles):
-            print(f"\nArticle No.{i + 1}\n")
-            print(f"{article['title']}\n")
-            print(f"{article['summary']}\n")
+            if not isinstance(article, dict):
+                print(f"Warning: Skipping invalid article at position {i + 1}")
+                continue
+
+            if 'title' not in article or 'summary' not in article:
+                print(f"Warning: Skipping article {i + 1} - missing title or summary")
+                continue
+
+            print(f"\n{'=' * console_width}")
+            print(f"Article No.{i + 1}")
+            print(f"{'=' * console_width}")
+
+            # Wrap and print title
+            wrapped_title = GameUI._wrap_text(article['title'])
+            print(f"Title: {wrapped_title}")
+
+            print()  # Empty line
+
+            # Wrap and print summary
+            wrapped_summary = GameUI._wrap_text(article['summary'])
+            print(f"Summary: {wrapped_summary}")
+            print(f"{'=' * console_width}\n")
 
     @staticmethod
     def print_answer_correct(user_name: str) -> None:
+        """
+        Display congratulatory message when player answers correctly.
+
+        Args:
+            user_name: The name of the player who got the answer right.
+
+        Note:
+            Uses humorous Trump-inspired messages to celebrate correct answers.
+        """
         trump_praise = [
             f"TRUMPMENDOUS! {user_name}, you found the fake — nobody finds fakes better than you, believe me.",
             f"YUGE win, {user_name}! Correct answer. The other options? Total disasters.",
@@ -101,21 +277,30 @@ class GameUI:
         ]
 
         trump_inform = [
-            f"Fifteen seconds and we’re right back—next round’s going to be huge, believe me.",
-            f"Give it 15 seconds—then we hit the next round. People say it’s going to be incredible.",
-            f"15 seconds and we roll again. Many, many people are saying it’ll be the best yet.",
+            f"Fifteen seconds and we're right back—next round's going to be huge, believe me.",
+            f"Give it 15 seconds—then we hit the next round. People say it's going to be incredible.",
+            f"15 seconds and we roll again. Many, many people are saying it'll be the best yet.",
         ]
 
         print(random.choice(trump_praise))
         print(random.choice(trump_inform))
 
     @staticmethod
-    def print_user_won(user_name) -> None:
+    def print_user_won(user_name: str) -> None:
+        """
+        Display victory message when player completes all rounds successfully.
+
+        Args:
+            user_name: The name of the player who won the game.
+
+        Note:
+            Uses humorous Trump-inspired victory messages to celebrate game completion.
+        """
         trump_praise = [
             f"Huge win {user_name}. Almost as good as mine. Almost.",
-            f"Tremendous job {user_name}. Everyone’s talking. Mostly about me—and you.",
+            f"Tremendous job {user_name}. Everyone's talking. Mostly about me—and you.",
             f"You won {user_name}. Big league. The best—besides me, of course.",
-            f"Legendary finish {user_name}. People are amazed. I’m impressed. That’s rare.",
+            f"Legendary finish {user_name}. People are amazed. I'm impressed. That's rare.",
             f"Victory! Massive. You and I—real winners. The best.",
         ]
 

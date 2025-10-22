@@ -2,18 +2,18 @@
 
 ## Type Safety and Code Quality
 - [x] Add return type hints to all methods in `game_ui.py`
-- [ ] Fix return type hint in `ai_gen.py`'s `generate()` method to match actual return (ArticleModel | None)
-- [ ] Add return type hints to `get_random_article()` in `local_article.py`
+- [x] Fix return type hint in `ai_gen.py`'s `generate()` method to match actual return (ArticleModel | None)
+- [x] Add return type hints to `get_random_article()` in `local_article.py`
 - [x] Fix `count(ArticlesLocal.local_articles == 0)` to `len(ArticlesLocal.local_articles) == 0` in `local_article.py`
 - [x] Simplify `check_answer()` in `game_ui.py` to a one-liner
 - [x] Fix typo in variable name `concatinated_summary` in `wiki_article.py`
 
 ## Error Handling
-- [ ] Add input validation for user selections in `game_ui.py`
-- [ ] Add retry logic for API failures in `ai_gen.py`
-- [ ] Add error handling for Wikipedia API failures in `wiki_article.py`
-- [ ] Add error handling for file operations in `local_article.py`
-- [ ] Add proper error handling for JSON parsing in `local_article.py`
+- [x] Add input validation for user selections in `game_ui.py`
+- [x] Add retry logic for API failures in `ai_gen.py`
+- [x] Add error handling for Wikipedia API failures in `wiki_article.py`
+- [x] Add error handling for file operations in `local_article.py`
+- [x] Add proper error handling for JSON parsing in `local_article.py`
 
 ## Code Organization
 - [x] Move `main()` from `ai_gen.py` to a separate test file
@@ -41,10 +41,10 @@
 - [ ] Add end-to-end tests for the complete application
 
 ## Documentation
-- [ ] Add docstrings to all public methods
-- [ ] Add module-level docstrings
+- [x] Add docstrings to all public methods
+- [x] Add module-level docstrings
 - [ ] Document the expected JSON structure for `responses.json`
-- [ ] Add a README with setup and usage instructions
+- [x] Add a README with setup and usage instructions
 
 ## Security
 - [ ] Remove API key exposure in error messages in `ai_gen.py`
@@ -53,6 +53,7 @@
 - [ ] Add input sanitization for user inputs
 
 ## Code Quality
+- [x] Add text wrapping for console output to improve readability
 - [ ] Replace print statements with proper logging
 - [ ] Add type checking with mypy
 - [ ] Add code formatting with black

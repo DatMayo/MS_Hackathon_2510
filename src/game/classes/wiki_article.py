@@ -54,44 +54,68 @@ class ArticleWiki(ArticlesLocal):
             ArticleModel: A dictionary containing the article's title, summary,
                         category, and truth status.
 
+        Raises:
+            ValueError: If no articles are found in the specified category.
+
         Note:
             The method processes the article summary to ensure it's an appropriate
             length for the game, typically limiting it to WIKI_MAX_SENTENCE_LENGTH
             sentences.
         """
-        wiki_handle = wikipediaapi.Wikipedia(user_agent="TruthPedia/1.0", language="en")
-        wiki_page = wiki_handle.page(f"Category:{category.name}")
+        try:
+            wiki_handle = wikipediaapi.Wikipedia(user_agent="TruthPedia/1.0", language="en")
+            wiki_page = wiki_handle.page(f"Category:{category.name}")
 
-        article_list = []
-        for entry in wiki_page.categorymembers.values():
-            entry_name = entry.title
-            if entry_name.startswith("Category") or entry_name.startswith("List"):
-                continue
+            if not wiki_page.exists():
+                raise ValueError(f"Category '{category.name}' does not exist on Wikipedia")
 
-            article_list.append(entry_name)
+            article_list = []
+            for entry in wiki_page.categorymembers.values():
+                entry_name = entry.title
+                if entry_name.startswith("Category") or entry_name.startswith("List"):
+                    continue
 
-        chosen_article: ArticleModel
-        random_article = random.choice(article_list)
-        article_page = wiki_handle.page(random_article)
+                article_list.append(entry_name)
 
-        split_summary = article_page.summary.split(".")
-        concatenated_summary = []
-        if len(split_summary) > 6:
-            for i in range(1, WIKI_MAX_SENTENCE_LENGTH + 1):
-                concatenated_summary.append(split_summary[i].strip("\n").strip("\\"))
+            if not article_list:
+                raise ValueError(f"No articles found in category '{category.name}'")
 
-            chosen_article = {
-                "title": article_page.title,
-                "summary": ". ".join(concatenated_summary),
-                "category": category.name,
-                "is_truth": True,
-            }
-        else:
-            chosen_article: ArticleModel = {
-                "title": article_page.title,
-                "summary": article_page.summary,
-                "category": category.name,
-                "is_truth": True,
-            }
+            chosen_article: ArticleModel
+            random_article = random.choice(article_list)
+            article_page = wiki_handle.page(random_article)
 
-        return chosen_article
+            if not article_page.exists():
+                raise ValueError(f"Article '{random_article}' does not exist on Wikipedia")
+
+            if not article_page.summary or len(article_page.summary.strip()) == 0:
+                raise ValueError(f"Article '{random_article}' has no summary content")
+
+            split_summary = article_page.summary.split(".")
+            concatenated_summary = []
+            if len(split_summary) > 6:
+                for i in range(1, WIKI_MAX_SENTENCE_LENGTH + 1):
+                    if i < len(split_summary):
+                        concatenated_summary.append(split_summary[i].strip("\n").strip("\\"))
+                    else:
+                        break
+
+                chosen_article = {
+                    "title": article_page.title,
+                    "summary": ". ".join(concatenated_summary),
+                    "category": category.name,
+                    "is_truth": True,
+                }
+            else:
+                chosen_article: ArticleModel = {
+                    "title": article_page.title,
+                    "summary": article_page.summary,
+                    "category": category.name,
+                    "is_truth": True,
+                }
+
+            return chosen_article
+
+        except wikipediaapi.exceptions.PageError as e:
+            raise ValueError(f"Wikipedia API error for category '{category.name}': {e}")
+        except Exception as e:
+            raise ValueError(f"Unexpected error while fetching Wikipedia article: {e}")
