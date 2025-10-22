@@ -14,23 +14,28 @@ A Python-based game that challenges players to identify fake news articles among
 
 ```
 ├── src/
-│   ├── config/
+│   ├── config/                  # Configuration settings
 │   │   ├── __init__.py          # Package initialization
 │   │   └── settings.py          # Application configuration and constants
-│   ├── data/
-│   │   └── responses.json       # Game data (true and false articles)
-│   └── game/
-│       ├── classes/             # Core game logic
-│       │   ├── __init__.py
-│       │   ├── ai_gen.py        # AI article generation
-│       │   ├── category.py      # Category management
-│       │   ├── game_ui.py       # User interface and game flow
-│       │   ├── local_article.py # Local article handling
-│       │   └── wiki_article.py  # Wikipedia integration
-│       └── models/              # Data models
-│           ├── __init__.py
+│   │
+│   ├── data/                    # Game data and resources
+│   │   └── responses.json       # Game responses and messages
+│   │
+│   └── game/                    # Core game package
+│       ├── classes/             # Game logic implementation
+│       │   ├── __init__.py      # Package initialization
+│       │   ├── ai_gen.py        # AI article generation using OpenAI
+│       │   ├── category.py      # Category management and selection
+│       │   ├── game_ui.py       # Command-line user interface
+│       │   ├── local_article.py # Local article handling and storage
+│       │   └── wiki_article.py  # Wikipedia API integration
+│       │
+│       └── models/              # Data models and types
+│           ├── __init__.py      # Package initialization
 │           ├── article.py       # Article data structure
-│           └── category.py      # Category data structure
+│           ├── category.py      # Category data structure
+│           └── player.py        # Player data and statistics
+│
 ├── .env.example                 # Environment variables template
 ├── .gitignore                   # Git ignore patterns
 ├── main.py                      # Application entry point
@@ -89,12 +94,19 @@ python main.py
 - [ ] Additional article categories
 - [ ] Score tracking and leaderboards
 - [ ] Enhanced AI prompt engineering
+- [ ] Implement caching for Wikipedia API responses
 
 ### Technical Highlights
 - **Type Safety**: Full Python type hints for better code reliability
 - **Modular Design**: Clean separation of concerns between components
 - **Documentation**: Comprehensive docstrings and module documentation
 - **Error Handling**: Robust error handling and user feedback
+
+## 🚀 Performance Notes
+
+- The game makes real-time API calls to Wikipedia, so an active internet connection is required
+- For optimal performance, ensure you have a stable network connection
+- The game includes duplicate prevention for category selection to ensure variety in gameplay
 
 ## 🤝 Contributing
 
