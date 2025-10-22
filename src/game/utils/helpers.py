@@ -19,15 +19,12 @@ import time
 from pathlib import Path
 from typing import List, Set, Callable, Union
 
-# --- Path Setup ---
-# Add project root (parent of 'src') to the Python path
-# This file is at: project_root/src/game/utils/helpers.py
+
 try:
     PROJECT_ROOT = Path(__file__).resolve().parents[3]
     if str(PROJECT_ROOT) not in sys.path:
         sys.path.insert(0, str(PROJECT_ROOT))
 
-    # Corrected path: /src/data/responses.json
     JSON_FILE_PATH = PROJECT_ROOT / "src" / "data" / "responses.json"
 except IndexError:
     print("Error: Could not determine project root.")
@@ -35,7 +32,7 @@ except IndexError:
     sys.exit(1)
 
 
-# --- Imports from project ---
+# Imports from project
 try:
     from src.game.models.article import ArticleModel
     from src.game.models.category import CategoryModel
@@ -48,15 +45,13 @@ except ImportError as e:
     print("python -m src.game.utils.helpers")
     sys.exit(1)
 
-# --- Configuration ---
+# Configuration
 TARGET_REAL_ARTICLES_PER_CAT = 8
 TARGET_FAKE_ARTICLES_PER_CAT = 4
 API_RETRY_DELAY = 5  # seconds to wait after a failed API call
 WIKI_API_DELAY = 1   # seconds to wait between successful Wikipedia API calls
 AI_API_DELAY = 2     # seconds to wait between successful OpenAI API calls
 
-
-# --- File I/O Functions ---
 
 def _load_existing_articles() -> List[ArticleModel]:
     """Loads the existing articles from the JSON file."""
@@ -78,16 +73,12 @@ def _load_existing_articles() -> List[ArticleModel]:
 def _save_articles(articles: List[ArticleModel]):
     """Saves the complete list of articles to the JSON file."""
     try:
-        # Ensure the 'src/data' directory exists
         JSON_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
         with open(JSON_FILE_PATH, "w", encoding="utf-8") as f:
             json.dump(articles, f, indent=2, ensure_ascii=False)
     except IOError as e:
         print(f"FATAL ERROR: Could not write to JSON file: {e}")
         raise
-
-
-# --- Core Logic ---
 
 def _fetch_and_add_articles(
     num_needed: int,
@@ -106,15 +97,13 @@ def _fetch_and_add_articles(
 
     print(f"Fetching {num_needed} new {article_type_label} articles...")
 
-    # *** THIS IS THE FIX: A patience limit for duplicates ***
     max_consecutive_duplicates = 20
 
     for i in range(num_needed):
-        consecutive_duplicates_found = 0  # Reset for each new article we need
+        consecutive_duplicates_found = 0
 
-        while True:  # Keep trying until we get a unique, valid one
+        while True:
             try:
-                # Call the getter function (either wiki or AI)
                 new_article = fetch_function(category_arg)
 
                 # Validate the response
@@ -128,10 +117,9 @@ def _fetch_and_add_articles(
                     all_articles_list.append(new_article)
                     existing_titles.add(new_article['title'])
                     print(f"  [{i+1}/{num_needed}] Added {article_type_label}: {new_article['title'][:50]}...")
-                    time.sleep(api_delay)  # Politeness delay
-                    break  # Success, exit inner 'while True'
+                    time.sleep(api_delay)
+                    break
                 else:
-                    # --- THIS IS THE MODIFIED LOGIC ---
                     print(f"  ! Duplicate found, retrying: {new_article['title'][:50]}...")
                     consecutive_duplicates_found += 1
                     time.sleep(0.5)
@@ -139,8 +127,7 @@ def _fetch_and_add_articles(
                     if consecutive_duplicates_found > max_consecutive_duplicates:
                         print(f"  ! Found {max_consecutive_duplicates}+ duplicates in a row.")
                         print(f"  ! Assuming category is exhausted of new {article_type_label} articles. Moving on.")
-                        return  # <-- THIS 'return' EXITS THE FUNCTION and stops fetching
-                    # --- END OF MODIFIED LOGIC ---
+                        return
 
             except Exception as e:
                 print(f"  ! Error fetching {article_type_label} article: {e}. Retrying in {API_RETRY_DELAY}s...")
@@ -186,7 +173,7 @@ def populate_fallback_data():
         _fetch_and_add_articles(
             num_needed=needed_real,
             fetch_function=ArticleWiki.get_random_article,
-            category_arg=category_model,  # Wiki getter needs the model
+            category_arg=category_model,
             existing_titles=existing_titles_in_cat,
             all_articles_list=all_articles,
             api_delay=WIKI_API_DELAY,
@@ -197,7 +184,7 @@ def populate_fallback_data():
         _fetch_and_add_articles(
             num_needed=needed_fake,
             fetch_function=FakeNewsGenerator.generate,
-            category_arg=category_name,  # AI getter just needs the name
+            category_arg=category_name,
             existing_titles=existing_titles_in_cat,
             all_articles_list=all_articles,
             api_delay=AI_API_DELAY,
@@ -219,7 +206,12 @@ def populate_fallback_data():
     print("======================================================")
 
 
-# --- Main Execution ---
-
 if __name__ == "__main__":
-    populate_fallback_data()
+    try:
+        populate_fallback_data()
+    except KeyboardInterrupt:
+        print("\n\nProcess interrupted by user. Exiting gracefully.")
+        try:
+            sys.exit(0)
+        except SystemExit:
+            pass
