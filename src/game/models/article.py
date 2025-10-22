@@ -4,6 +4,8 @@ Article data model definitions.
 This module defines the data structures used for representing articles
 in the TruthPedia game, including both real and AI-generated articles.
 """
+
+
 # Article model definition
 class ArticleModel:
     """
@@ -19,6 +21,7 @@ class ArticleModel:
         is_truth (bool): Whether this article contains real information (True)
                         or is AI-generated fake news (False).
     """
+
     title: str
     summary: str
     category: str

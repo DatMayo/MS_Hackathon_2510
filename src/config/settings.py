@@ -5,6 +5,7 @@ This module handles all configuration settings for the TruthPedia game,
 including API keys, game parameters, and display settings. It uses
 environment variables for sensitive information like API keys.
 """
+
 # Game settings and configuration
 import os
 from dotenv import load_dotenv

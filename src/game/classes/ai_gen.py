@@ -69,7 +69,9 @@ class FakeNewsGenerator:
 
             # Validate required fields
             if not data.get("title") or not data.get("summary"):
-                print("Warning: Incomplete response from OpenAI API - missing title or summary")
+                print(
+                    "Warning: Incomplete response from OpenAI API - missing title or summary"
+                )
                 return None
 
             article: ArticleModel = {
@@ -108,11 +110,15 @@ class FakeNewsGenerator:
         """
         # Input validation
         if not category or not isinstance(category, str):
-            print("Error: Invalid category provided. Category must be a non-empty string.")
+            print(
+                "Error: Invalid category provided. Category must be a non-empty string."
+            )
             return None
 
         if not OPENAI_API_KEY:
-            print("Error: OPENAI_API_KEY not found. Please configure your OpenAI API key.")
+            print(
+                "Error: OPENAI_API_KEY not found. Please configure your OpenAI API key."
+            )
             return None
 
         try:

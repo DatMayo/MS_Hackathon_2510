@@ -5,6 +5,7 @@ This module provides functionality for managing game categories,
 including predefined categories and methods for selecting random
 categories or finding categories by name.
 """
+
 import random
 from src.game.models.category import CategoryModel
 
@@ -20,6 +21,7 @@ class Category:
     Class Attributes:
         categories: A list of predefined category names as strings.
     """
+
     categories: list[str] = [
         "Urban_legends",
         "Conspiracy_theories",

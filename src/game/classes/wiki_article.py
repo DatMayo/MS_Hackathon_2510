@@ -63,11 +63,15 @@ class ArticleWiki(ArticlesLocal):
             sentences.
         """
         try:
-            wiki_handle = wikipediaapi.Wikipedia(user_agent="TruthPedia/1.0", language="en")
+            wiki_handle = wikipediaapi.Wikipedia(
+                user_agent="TruthPedia/1.0", language="en"
+            )
             wiki_page = wiki_handle.page(f"Category:{category.name}")
 
             if not wiki_page.exists():
-                raise ValueError(f"Category '{category.name}' does not exist on Wikipedia")
+                raise ValueError(
+                    f"Category '{category.name}' does not exist on Wikipedia"
+                )
 
             article_list = []
             for entry in wiki_page.categorymembers.values():
@@ -85,7 +89,9 @@ class ArticleWiki(ArticlesLocal):
             article_page = wiki_handle.page(random_article)
 
             if not article_page.exists():
-                raise ValueError(f"Article '{random_article}' does not exist on Wikipedia")
+                raise ValueError(
+                    f"Article '{random_article}' does not exist on Wikipedia"
+                )
 
             if not article_page.summary or len(article_page.summary.strip()) == 0:
                 raise ValueError(f"Article '{random_article}' has no summary content")
@@ -95,7 +101,9 @@ class ArticleWiki(ArticlesLocal):
             if len(split_summary) > 6:
                 for i in range(1, WIKI_MAX_SENTENCE_LENGTH + 1):
                     if i < len(split_summary):
-                        concatenated_summary.append(split_summary[i].strip("\n").strip("\\"))
+                        concatenated_summary.append(
+                            split_summary[i].strip("\n").strip("\\")
+                        )
                     else:
                         break
 

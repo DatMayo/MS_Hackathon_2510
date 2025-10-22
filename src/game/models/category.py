@@ -4,6 +4,8 @@ Category data model definitions.
 This module defines the data structures used for representing categories
 in the TruthPedia game, which are used to organize articles by topic.
 """
+
+
 class CategoryModel:
     """
     Data model for representing categories in the game.

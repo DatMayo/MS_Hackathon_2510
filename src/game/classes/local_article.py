@@ -60,24 +60,39 @@ class ArticlesLocal:
                 for article in data:
                     # Validate required fields
                     if not isinstance(article, dict):
-                        print(f"Warning: Skipping invalid article (not a dictionary): {article}")
+                        print(
+                            f"Warning: Skipping invalid article (not a dictionary): {article}"
+                        )
                         continue
 
-                    if not all(key in article for key in ['title', 'summary', 'category', 'is_truth']):
-                        print(f"Warning: Skipping article with missing required fields: {article}")
+                    if not all(
+                        key in article
+                        for key in ["title", "summary", "category", "is_truth"]
+                    ):
+                        print(
+                            f"Warning: Skipping article with missing required fields: {article}"
+                        )
                         continue
 
                     # Validate field types
-                    if not isinstance(article['title'], str) or not isinstance(article['summary'], str):
-                        print(f"Warning: Skipping article with invalid title/summary types: {article}")
+                    if not isinstance(article["title"], str) or not isinstance(
+                        article["summary"], str
+                    ):
+                        print(
+                            f"Warning: Skipping article with invalid title/summary types: {article}"
+                        )
                         continue
 
-                    if not isinstance(article['category'], str):
-                        print(f"Warning: Skipping article with invalid category type: {article}")
+                    if not isinstance(article["category"], str):
+                        print(
+                            f"Warning: Skipping article with invalid category type: {article}"
+                        )
                         continue
 
-                    if not isinstance(article['is_truth'], bool):
-                        print(f"Warning: Skipping article with invalid is_truth type: {article}")
+                    if not isinstance(article["is_truth"], bool):
+                        print(
+                            f"Warning: Skipping article with invalid is_truth type: {article}"
+                        )
                         continue
 
                     current_article: ArticleModel = article
@@ -90,7 +105,9 @@ class ArticlesLocal:
                 return True
 
         except FileNotFoundError:
-            print("Error: responses.json file not found. Please ensure the file exists in the correct location.")
+            print(
+                "Error: responses.json file not found. Please ensure the file exists in the correct location."
+            )
             return False
         except json.JSONDecodeError as e:
             print(f"Error: Failed to parse JSON file: {e}")
@@ -102,7 +119,9 @@ class ArticlesLocal:
             return False
 
     @staticmethod
-    def get_random_article(category: CategoryModel, is_truth: bool = True) -> ArticleModel:
+    def get_random_article(
+        category: CategoryModel, is_truth: bool = True
+    ) -> ArticleModel:
         """
         Retrieve a random article matching the specified criteria.
 
@@ -127,8 +146,10 @@ class ArticlesLocal:
             for comparison with the article's category field.
         """
         # Input validation
-        if not category or not hasattr(category, 'name'):
-            raise ValueError("Invalid category provided. Category must have a 'name' attribute.")
+        if not category or not hasattr(category, "name"):
+            raise ValueError(
+                "Invalid category provided. Category must have a 'name' attribute."
+            )
 
         if not isinstance(is_truth, bool):
             raise ValueError("is_truth parameter must be a boolean value.")
@@ -141,10 +162,15 @@ class ArticlesLocal:
         # Generate a new list and filter truth and category
         filtered_list: list[ArticleModel] = []
         for article in ArticlesLocal.local_articles:
-            if article.get("is_truth") == is_truth and article.get("category") == category.name:
+            if (
+                article.get("is_truth") == is_truth
+                and article.get("category") == category.name
+            ):
                 filtered_list.append(article)
 
         if not filtered_list:
-            raise IndexError(f"No articles found for category '{category.name}' with is_truth={is_truth}")
+            raise IndexError(
+                f"No articles found for category '{category.name}' with is_truth={is_truth}"
+            )
 
         return random.choice(filtered_list)

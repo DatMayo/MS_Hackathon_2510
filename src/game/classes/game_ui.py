@@ -144,7 +144,9 @@ class GameUI:
 
         try:
             while True:
-                user_input = input("\nChoose wisely... In which category do you wanna test your wits? ").strip()
+                user_input = input(
+                    "\nChoose wisely... In which category do you wanna test your wits? "
+                ).strip()
 
                 if not user_input:
                     print("Please enter a number.")
@@ -153,11 +155,15 @@ class GameUI:
                 try:
                     user_selection = int(user_input)
                 except ValueError:
-                    print(f"Please enter a valid number between 1 and {len(category_list)}")
+                    print(
+                        f"Please enter a valid number between 1 and {len(category_list)}"
+                    )
                     continue
 
                 if user_selection < 1 or user_selection > len(category_list):
-                    print(f"Please enter a valid number between 1 and {len(category_list)}")
+                    print(
+                        f"Please enter a valid number between 1 and {len(category_list)}"
+                    )
                     continue
 
                 selected_category = category_list[user_selection - 1]
@@ -224,13 +230,17 @@ class GameUI:
             ValueError: If the article doesn't have the required 'is_truth' field.
         """
         GameUI.clear_screen()
-        if not isinstance(article, dict) or 'is_truth' not in article:
-            raise ValueError("Invalid article provided. Article must be a dictionary with 'is_truth' field.")
+        if not isinstance(article, dict) or "is_truth" not in article:
+            raise ValueError(
+                "Invalid article provided. Article must be a dictionary with 'is_truth' field."
+            )
 
         return not article["is_truth"]
 
     @staticmethod
-    def _display_article(article: ArticleModel, index: int, total: int, console_width: int) -> None:
+    def _display_article(
+        article: ArticleModel, index: int, total: int, console_width: int
+    ) -> None:
         """
         Display a single article with proper formatting.
 
@@ -245,18 +255,20 @@ class GameUI:
         print(f"{'=' * console_width}")
 
         # Wrap and print title
-        wrapped_title = GameUI._wrap_text(article['title'])
+        wrapped_title = GameUI._wrap_text(article["title"])
         print(f"Title: {wrapped_title}")
 
         print()  # Empty line
 
         # Wrap and print summary
-        wrapped_summary = GameUI._wrap_text(article['summary'])
+        wrapped_summary = GameUI._wrap_text(article["summary"])
         print(f"Summary: {wrapped_summary}")
         print(f"{'=' * console_width}\n")
 
     @staticmethod
-    def print_articles(my_articles: list[ArticleModel], select_mode: bool = False) -> int | None:
+    def print_articles(
+        my_articles: list[ArticleModel], select_mode: bool = False
+    ) -> int | None:
         """
         Displays articles one at a time with pagination controls.
 
@@ -286,7 +298,7 @@ class GameUI:
             if not isinstance(article, dict):
                 print(f"Warning: Skipping invalid article at position {i + 1}")
                 continue
-            if 'title' not in article or 'summary' not in article:
+            if "title" not in article or "summary" not in article:
                 print(f"Warning: Skipping article {i + 1} - missing title or summary")
                 continue
             valid_articles.append(article)
@@ -301,8 +313,13 @@ class GameUI:
 
         while True:
             GameUI.clear_screen()
-            GameUI._display_article(valid_articles[current_index], current_index + 1, total_articles, console_width)
-            
+            GameUI._display_article(
+                valid_articles[current_index],
+                current_index + 1,
+                total_articles,
+                console_width,
+            )
+
             # Show navigation/selection instructions
             print("\nNavigation:")
             available_answers: list[str] = []
@@ -317,39 +334,47 @@ class GameUI:
                 # print(f"  (1-{total_articles}) Select this article")
             available_answers.append("(Q)uit")
             print(" | ".join(available_answers))
-            #print("  (Q)uit")
-            
+            # print("  (Q)uit")
+
             # Get user input
             while True:
                 try:
                     choice = input("\nYour choice: ").strip().lower()
-                    
+
                     # Navigation
-                    if choice in ['n', 'next'] and current_index < total_articles - 1:
+                    if choice in ["n", "next"] and current_index < total_articles - 1:
                         current_index += 1
                         break
-                    elif choice in ['p', 'prev', 'previous'] and current_index > 0:
+                    elif choice in ["p", "prev", "previous"] and current_index > 0:
                         current_index -= 1
                         break
                     # Article selection (only in select mode)
-                    elif select_mode and choice.isdigit() and 1 <= int(choice) <= total_articles:
+                    elif (
+                        select_mode
+                        and choice.isdigit()
+                        and 1 <= int(choice) <= total_articles
+                    ):
                         GameUI.clear_screen()
                         return int(choice)
                     # Quit
-                    elif choice in ['q', 'quit', 'exit']:
+                    elif choice in ["q", "quit", "exit"]:
                         GameUI.clear_screen()
                         return None
                     else:
                         valid_choices = []
                         if current_index > 0:
-                            valid_choices.extend(['p', 'prev', 'previous'])
+                            valid_choices.extend(["p", "prev", "previous"])
                         if current_index < total_articles - 1:
-                            valid_choices.extend(['n', 'next'])
+                            valid_choices.extend(["n", "next"])
                         if select_mode:
-                            valid_choices.extend([str(i+1) for i in range(total_articles)])
-                        valid_choices.extend(['q', 'quit', 'exit'])
-                        print(f"Please enter a valid choice: {', '.join(valid_choices)}")
-                        
+                            valid_choices.extend(
+                                [str(i + 1) for i in range(total_articles)]
+                            )
+                        valid_choices.extend(["q", "quit", "exit"])
+                        print(
+                            f"Please enter a valid choice: {', '.join(valid_choices)}"
+                        )
+
                 except (KeyboardInterrupt, EOFError):
                     GameUI.clear_screen()
                     return None
