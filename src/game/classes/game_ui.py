@@ -104,9 +104,6 @@ class GameUI:
             and displays the title and summary of the Fakenews article.
         """
         GameUI.clear_screen()
-        message = f"{Fore.RED}Well {user_name}, you are pretty brainwashed...\nYou've lost!"
-        print(message)
-        print(f"{Fore.YELLOW}The following summary was the Fakenews:\n")
 
         # Display the fake article with consistent formatting
         print(f"{Fore.CYAN}{'=' * CONSOLE_WIDTH}")
@@ -123,6 +120,11 @@ class GameUI:
         wrapped_summary = GameUI._wrap_text(ai_article['summary'])
         print(f"{Fore.WHITE}Summary: {wrapped_summary}")
         print(f"{Fore.CYAN}{'=' * CONSOLE_WIDTH}\n")
+
+        message = f"{Fore.RED}Well {user_name}, you are pretty brainwashed...\nYou've lost!"
+        print(message)
+        print(f"{Fore.YELLOW}The following summary was the Fakenews:\n")
+
         return message
 
     @staticmethod
