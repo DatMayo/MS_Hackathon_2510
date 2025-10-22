@@ -230,15 +230,44 @@ class GameUI:
         return not article["is_truth"]
 
     @staticmethod
-    def print_articles(my_articles: list[ArticleModel]) -> None:
+    def _display_article(article: ArticleModel, index: int, total: int, console_width: int) -> None:
         """
-        Prints out the articles in the given list with text wrapping for better readability.
+        Display a single article with proper formatting.
 
         Args:
-            my_articles (list[ArticleModel]): A list of articles to be printed.
+            article: The article to display
+            index: The 1-based index of the article
+            total: Total number of articles
+            console_width: Width of the console for formatting
+        """
+        print(f"\n{'=' * console_width}")
+        print(f"Article {index} of {total}")
+        print(f"{'=' * console_width}")
+
+        # Wrap and print title
+        wrapped_title = GameUI._wrap_text(article['title'])
+        print(f"Title: {wrapped_title}")
+
+        print()  # Empty line
+
+        # Wrap and print summary
+        wrapped_summary = GameUI._wrap_text(article['summary'])
+        print(f"Summary: {wrapped_summary}")
+        print(f"{'=' * console_width}\n")
+
+    @staticmethod
+    def print_articles(my_articles: list[ArticleModel], select_mode: bool = False) -> int | None:
+        """
+        Displays articles one at a time with pagination controls.
+
+        Args:
+            my_articles (list[ArticleModel]): A list of articles to be displayed.
+            select_mode (bool): If True, allows selecting an article to return its index.
+                              If False, just for viewing (returns None).
 
         Returns:
-            None
+            int | None: In select_mode, returns the 1-based index of the selected article.
+                      In view mode, returns None.
 
         Raises:
             ValueError: If the input is not a list or if articles are invalid.
@@ -249,34 +278,81 @@ class GameUI:
 
         if not my_articles:
             print("No articles to display.")
-            return
+            return None
 
-        # Set console width (typical terminal width)
-        console_width = CONSOLE_WIDTH
-
+        # Filter out invalid articles
+        valid_articles = []
         for i, article in enumerate(my_articles):
             if not isinstance(article, dict):
                 print(f"Warning: Skipping invalid article at position {i + 1}")
                 continue
-
             if 'title' not in article or 'summary' not in article:
                 print(f"Warning: Skipping article {i + 1} - missing title or summary")
                 continue
+            valid_articles.append(article)
 
-            print(f"\n{'=' * console_width}")
-            print(f"Article No.{i + 1}")
-            print(f"{'=' * console_width}")
+        if not valid_articles:
+            print("No valid articles to display.")
+            return None
 
-            # Wrap and print title
-            wrapped_title = GameUI._wrap_text(article['title'])
-            print(f"Title: {wrapped_title}")
+        console_width = CONSOLE_WIDTH
+        current_index = 0
+        total_articles = len(valid_articles)
 
-            print()  # Empty line
-
-            # Wrap and print summary
-            wrapped_summary = GameUI._wrap_text(article['summary'])
-            print(f"Summary: {wrapped_summary}")
-            print(f"{'=' * console_width}\n")
+        while True:
+            GameUI.clear_screen()
+            GameUI._display_article(valid_articles[current_index], current_index + 1, total_articles, console_width)
+            
+            # Show navigation/selection instructions
+            print("\nNavigation:")
+            available_answers: list[str] = []
+            if current_index > 0:
+                available_answers.append("(P)revious")
+                # print("  (P)revious")
+            if current_index < total_articles - 1:
+                available_answers.append("(N)ext")
+                # print("  (N)ext")
+            if select_mode:
+                available_answers.append(f"(1-{total_articles}) Select this article")
+                # print(f"  (1-{total_articles}) Select this article")
+            available_answers.append("(Q)uit")
+            print(" | ".join(available_answers))
+            #print("  (Q)uit")
+            
+            # Get user input
+            while True:
+                try:
+                    choice = input("\nYour choice: ").strip().lower()
+                    
+                    # Navigation
+                    if choice in ['n', 'next'] and current_index < total_articles - 1:
+                        current_index += 1
+                        break
+                    elif choice in ['p', 'prev', 'previous'] and current_index > 0:
+                        current_index -= 1
+                        break
+                    # Article selection (only in select mode)
+                    elif select_mode and choice.isdigit() and 1 <= int(choice) <= total_articles:
+                        GameUI.clear_screen()
+                        return int(choice)
+                    # Quit
+                    elif choice in ['q', 'quit', 'exit']:
+                        GameUI.clear_screen()
+                        return None
+                    else:
+                        valid_choices = []
+                        if current_index > 0:
+                            valid_choices.extend(['p', 'prev', 'previous'])
+                        if current_index < total_articles - 1:
+                            valid_choices.extend(['n', 'next'])
+                        if select_mode:
+                            valid_choices.extend([str(i+1) for i in range(total_articles)])
+                        valid_choices.extend(['q', 'quit', 'exit'])
+                        print(f"Please enter a valid choice: {', '.join(valid_choices)}")
+                        
+                except (KeyboardInterrupt, EOFError):
+                    GameUI.clear_screen()
+                    return None
 
     @staticmethod
     def print_answer_correct(user_name: str) -> None:

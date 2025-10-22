@@ -55,8 +55,10 @@ def main():
                 articles.append(ai_article)
 
                 # Display articles and get user answer
-                GameUI.print_articles(articles)
-                user_answer = GameUI.get_user_answer()
+                user_answer = GameUI.print_articles(articles, select_mode=True)
+                if user_answer is None:  # User chose to quit
+                    print("Game ended by user.")
+                    return
 
                 # Check answer
                 if user_answer < 1 or user_answer > len(articles):
