@@ -7,6 +7,8 @@ categories or finding categories by name.
 """
 
 import random
+
+from src.config.settings import WIKI_MAX_DISPLAYED_CATEGORIES
 from src.game.models.category import CategoryModel
 
 
@@ -46,31 +48,6 @@ class Category:
     ]
 
     @staticmethod
-    def get_category_by_name(category_name: str) -> CategoryModel | None:
-        """
-        Find a category by its name.
-
-        Args:
-            category_name: The name of the category to find.
-
-        Returns:
-            CategoryModel or None: The category object if found, None otherwise.
-
-        Example:
-            >>> category = Category.get_category_by_name("Science")
-            >>> if category:
-            ...     print(f"Found category: {category.name}")
-        """
-        return next(
-            (
-                category
-                for category in Category.categories
-                if category.name == category_name
-            ),
-            None,
-        )
-
-    @staticmethod
     def get_random_category() -> CategoryModel:
         """
         Get a random category from the predefined list.
@@ -83,3 +60,17 @@ class Category:
             >>> print(f"Random category: {random_cat.name}")
         """
         return CategoryModel(random.choice(Category.categories))
+
+    @staticmethod
+    def get_random_categories() -> list[CategoryModel]:
+        """
+        Get a list of random categories from the predefined list.
+
+        Returns:
+            list[CategoryModel]: A list of randomly selected categories.
+
+        Example:
+            >>> random_cats = Category.get_random_categories()
+            >>> print(f"Random categories: {random_cats}")
+        """
+        return [CategoryModel(random.choice(Category.categories)) for _ in range(WIKI_MAX_DISPLAYED_CATEGORIES)]

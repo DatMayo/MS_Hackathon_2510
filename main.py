@@ -4,6 +4,9 @@ Main entry point for the console-based quiz game.
 import sys
 from colorama import init, Fore, Style
 
+from src.game.classes.category import Category
+from src.game.models.category import CategoryModel
+
 # Initialize colorama for colorful console output
 init(autoreset=True)
 
@@ -25,6 +28,20 @@ def main():
     """
     try:
         # Initialize game
+        category_list: list[CategoryModel] = Category.get_random_categories()
+        GameUI.draw_logo()
+
+        ai_articles = FakeNewsGenerator.generate_all(category_list)
+
+        """
+        for cat_index, category in enumerate(category_list):
+            for x in range(GAME_DEFAULT_ROUNDS):
+                loading_current += 1
+                print(f"Loading game... {loading_current}/{loading_max}")
+                ai_article.append(FakeNewsGenerator.generate(category.name))
+        """
+
+        # Game main start
         GameUI.draw_welcome()
         GameUI.print_basic_info()
 
@@ -32,18 +49,20 @@ def main():
         user_name = GameUI.get_player_name()
 
         # Get and select category
-        category_list = GameUI.print_random_categories(user_name)
+        GameUI.print_random_categories(user_name, category_list)
         selected_category = GameUI.get_user_category(category_list)
+
+        filtered_ai_articles: list[ArticleModel] = []
+        for filtered_ai_article in ai_articles:
+            if filtered_ai_article['category'] == selected_category.name:
+                filtered_ai_articles.append(filtered_ai_article)
 
         # Main game loop
         current_round = 0
         while current_round < GAME_DEFAULT_ROUNDS:
             try:
                 # Generate AI fake article
-                ai_article = FakeNewsGenerator.generate(selected_category.name)
-
-                # Debug
-                # ai_article = None
+                ai_article = filtered_ai_articles[current_round]
 
                 if not ai_article:
                     #Get pre-generated fake article
