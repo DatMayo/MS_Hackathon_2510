@@ -68,7 +68,7 @@ def main():
                 user_answer_correct = GameUI.check_answer(articles[user_answer - 1])
 
                 if not user_answer_correct:
-                    GameUI.print_game_over(user_name)
+                    GameUI.print_game_over(user_name, ai_article)
                     return
 
                 current_round += 1

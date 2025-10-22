@@ -80,19 +80,27 @@ class GameUI:
         )
 
     @staticmethod
-    def print_game_over(user_name: str) -> str:
+    def print_game_over(user_name: str , ai_article: ArticleModel) -> str:
         """
-        Display game over message when player loses.
+        Print a game over message to the user.
 
         Args:
-            user_name: The name of the player who lost.
+            user_name: The name of the player who lost the game.
+            ai_article: The article that was the Fakenews.
 
         Returns:
-            str: The game over message (for potential future use).
+            str: The message that was printed.
+
+        Note:
+            This method clears the screen, prints the game over message,
+            and displays the title and summary of the Fakenews article.
         """
         GameUI.clear_screen()
         message = f"Well {user_name}, you are pretty brainwashed...\nYou've lost!"
         print(message)
+        print("The following summary was the Fakenews:\n")
+        print(f"{ai_article.title}")
+        GameUI._wrap_text(f"{ai_article.summary}")
         return message
 
     @staticmethod
