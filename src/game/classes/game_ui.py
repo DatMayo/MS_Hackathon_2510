@@ -25,7 +25,22 @@ class GameUI:
 
     @staticmethod
     def draw_welcome() -> None:
+        GameUI.clear_screen()
         print("Welcome to TruthPedia!\n")
+
+    @staticmethod
+    def clear_screen(lines: int = 100) -> None:
+        """
+        Clear the console screen by printing a specified number of blank lines.
+
+        Args:
+            lines (int): The number of blank lines to print. Defaults to 100.
+
+        Returns:
+            None
+        """
+        for x in range(lines):
+            print("")
 
     @staticmethod
     def get_player_name() -> str:
@@ -75,6 +90,7 @@ class GameUI:
         Returns:
             str: The game over message (for potential future use).
         """
+        GameUI.clear_screen()
         message = f"Well {user_name}, you are pretty brainwashed...\nYou've lost!"
         print(message)
         return message
@@ -95,6 +111,7 @@ class GameUI:
         Note:
             Categories are selected without replacement to ensure variety.
         """
+        GameUI.clear_screen()
         category_list: list[CategoryModel] = []
         print("Here you have your choices:")
 
@@ -206,6 +223,7 @@ class GameUI:
         Raises:
             ValueError: If the article doesn't have the required 'is_truth' field.
         """
+        GameUI.clear_screen()
         if not isinstance(article, dict) or 'is_truth' not in article:
             raise ValueError("Invalid article provided. Article must be a dictionary with 'is_truth' field.")
 
@@ -225,6 +243,7 @@ class GameUI:
         Raises:
             ValueError: If the input is not a list or if articles are invalid.
         """
+        GameUI.clear_screen()
         if not isinstance(my_articles, list):
             raise ValueError("Articles must be provided as a list.")
 
@@ -270,6 +289,7 @@ class GameUI:
         Note:
             Uses humorous Trump-inspired messages to celebrate correct answers.
         """
+        GameUI.clear_screen()
         trump_praise = [
             f"TRUMPMENDOUS! {user_name}, you found the fake — nobody finds fakes better than you, believe me.",
             f"YUGE win, {user_name}! Correct answer. The other options? Total disasters.",
@@ -303,5 +323,5 @@ class GameUI:
             f"Legendary finish {user_name}. People are amazed. I'm impressed. That's rare.",
             f"Victory! Massive. You and I—real winners. The best.",
         ]
-
+        GameUI.clear_screen()
         print(random.choice(trump_praise))
