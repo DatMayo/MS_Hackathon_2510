@@ -37,7 +37,7 @@ class Category:
         "Pseudoscience",
         "Fringe_theories",
         "Mass_psychogenic_illness",
-        "April_Fools%27_Day",
+        "April_Fools'_Day",
         "Lists_of_reportedly_haunted_locations",
         "New_religious_movements",
         "Doomsday_scenarios",

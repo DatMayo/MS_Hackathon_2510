@@ -59,7 +59,6 @@ class GameUI:
             if not user_name:
                 print("Please enter a valid name.")
                 return GameUI.get_player_name()
-            print(f"Hello {user_name}!")
             return user_name
         except (KeyboardInterrupt, EOFError):
             print("\nGoodbye!")
@@ -99,13 +98,14 @@ class GameUI:
         message = f"Well {user_name}, you are pretty brainwashed...\nYou've lost!"
         print(message)
         print("The following summary was the Fakenews:\n")
-        print(f"{ai_article.title}")
-        GameUI._wrap_text(f"{ai_article.summary}")
+        print(f"{ai_article['title']}")
+        GameUI._wrap_text(f"{ai_article['summary']}")
         return message
 
     @staticmethod
     def print_random_categories(
-        category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES,
+        user_name: str,
+        category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES
     ) -> list[CategoryModel]:
         """
         Display and return a list of random categories for the player to choose from.
@@ -120,6 +120,7 @@ class GameUI:
             Categories are selected without replacement to ensure variety.
         """
         GameUI.clear_screen()
+        print(f"Hello, {user_name}!")
         category_list: list[CategoryModel] = []
         print("Here you have your choices:")
 
@@ -434,3 +435,12 @@ class GameUI:
         ]
         GameUI.clear_screen()
         print(random.choice(trump_praise))
+
+    @staticmethod
+    def shuffle(articles: list[ArticleModel]):
+        shuffled_list = []
+        while articles:
+            random_article = random.randint(0, len(articles)-1)
+            popped_article = articles.pop(random_article)
+            shuffled_list.append(popped_article)
+        return shuffled_list

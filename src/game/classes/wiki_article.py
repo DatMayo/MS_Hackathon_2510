@@ -123,7 +123,7 @@ class ArticleWiki(ArticlesLocal):
 
             return chosen_article
 
-        except wikipediaapi.exceptions.PageError as e:
-            raise ValueError(f"Wikipedia API error for category '{category.name}': {e}")
+        # except wikipediaapi.exceptions.PageError as e:
+        #    raise ValueError(f"Wikipedia API error for category '{category.name}': {e}")
         except Exception as e:
             raise ValueError(f"Unexpected error while fetching Wikipedia article: {e}")

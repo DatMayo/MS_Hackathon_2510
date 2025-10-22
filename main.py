@@ -7,6 +7,7 @@ from src.game.classes.game_ui import GameUI
 
 from src.game.classes.ai_gen import FakeNewsGenerator
 from src.game.classes.wiki_article import ArticleWiki
+from src.game.classes.local_article import ArticlesLocal
 from src.game.models.article import ArticleModel
 
 
@@ -26,7 +27,7 @@ def main():
         user_name = GameUI.get_player_name()
 
         # Get and select category
-        category_list = GameUI.print_random_categories()
+        category_list = GameUI.print_random_categories(user_name)
         selected_category = GameUI.get_user_category(category_list)
 
         # Main game loop
@@ -36,23 +37,38 @@ def main():
                 # Generate AI fake article
                 ai_article = FakeNewsGenerator.generate(selected_category.name)
                 if not ai_article:
-                    print("Error: Failed to generate fake article. Skipping round.")
-                    continue
-
-                # Get real articles from Wikipedia
+                    #Get pre-generated fake article
+                    print("Error: Failed to generate fake article. Using pre-generated.")
+                    ai_article = ArticlesLocal.get_random_article(selected_category, False)
+                    if not ai_article:
+                        print("Error: Failed to fetch pre-generated fake article.")
+                        return
+                # Get real articles
                 articles: list[ArticleModel] = []
                 for attempt in range(2):
+                    real_article = ""
+
                     try:
+                        # Get real article from Wikipedia
                         real_article = ArticleWiki.get_random_article(selected_category)
-                        articles.append(real_article)
                     except (ValueError, ConnectionError) as e:
                         print(f"Warning: Failed to fetch real article (attempt {attempt + 1}): {e}")
                         if attempt == 1:  # Last attempt
-                            print("Error: Unable to fetch real articles. Ending game.")
-                            return
+                            # Get real article from local
+                            print("Error: Unable to fetch articles from Wikipedia. Using pre-fetched.")
+                            real_article = ArticlesLocal.get_random_article(selected_category, True)
+                            if not real_article:
+                                print("Error: Failed to fetch pre-generated real article.")
+                                return
+                    # Add real artice
+                    articles.append(real_article)
 
                 # Add fake article
                 articles.append(ai_article)
+
+                # Shuffle articles
+                shuffled_list = GameUI.shuffle(articles)
+                articles = shuffled_list
 
                 # Display articles and get user answer
                 user_answer = GameUI.print_articles(articles, select_mode=True)
@@ -80,7 +96,6 @@ def main():
             except (ValueError, IndexError) as e:
                 print(f"Error in round {current_round + 1}: {e}")
                 print("Skipping this round and continuing...")
-                current_round += 1
                 continue
             except Exception as e:
                 print(f"Unexpected error in round {current_round + 1}: {e}")
