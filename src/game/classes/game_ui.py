@@ -79,7 +79,7 @@ class GameUI:
         )
 
     @staticmethod
-    def print_game_over(user_name: str , ai_article: ArticleModel) -> str:
+    def print_game_over(user_name: str, ai_article: ArticleModel) -> str:
         """
         Print a game over message to the user.
 
@@ -104,8 +104,7 @@ class GameUI:
 
     @staticmethod
     def print_random_categories(
-        user_name: str,
-        category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES
+        user_name: str, category_count: int = WIKI_MAX_DISPLAYED_CATEGORIES
     ) -> list[CategoryModel]:
         """
         Display and return a list of random categories for the player to choose from.
@@ -440,7 +439,7 @@ class GameUI:
     def shuffle(articles: list[ArticleModel]):
         shuffled_list = []
         while articles:
-            random_article = random.randint(0, len(articles)-1)
+            random_article = random.randint(0, len(articles) - 1)
             popped_article = articles.pop(random_article)
             shuffled_list.append(popped_article)
         return shuffled_list

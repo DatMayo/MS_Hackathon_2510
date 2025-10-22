@@ -36,21 +36,30 @@ def main():
             try:
                 # Generate AI fake article
                 ai_article = FakeNewsGenerator.generate(selected_category.name)
+
+                # Debug
+                # ai_article = None
+
                 if not ai_article:
                     #Get pre-generated fake article
                     print("Error: Failed to generate fake article. Using pre-generated.")
                     ai_article = ArticlesLocal.get_random_article(selected_category, False)
                     if not ai_article:
                         print("Error: Failed to fetch pre-generated fake article.")
-                        return
                 # Get real articles
                 articles: list[ArticleModel] = []
                 for attempt in range(2):
-                    real_article = ""
+                    real_article = None
 
                     try:
                         # Get real article from Wikipedia
                         real_article = ArticleWiki.get_random_article(selected_category)
+
+                        #Debug
+                        real_article = None
+
+                        if real_article == "":
+                            print("Error: Failed to fetch real article from Wikipedia.")
                     except (ValueError, ConnectionError) as e:
                         print(f"Warning: Failed to fetch real article (attempt {attempt + 1}): {e}")
                         if attempt == 1:  # Last attempt

@@ -9,6 +9,7 @@ criteria such as category and truth status.
 import random
 import json
 from typing import List, Optional
+from pathlib import Path
 
 from src.game.models.category import CategoryModel
 from src.game.models.article import ArticleModel
@@ -50,7 +51,9 @@ class ArticlesLocal:
             return True
 
         try:
-            with open("../../data/responses.json", "r", encoding="utf-8") as file:
+            current_dir = Path(__file__).parent
+            file_path = (current_dir / "../../data/responses.json").resolve()
+            with open(file_path, "r", encoding="utf-8") as file:
                 data = json.load(file)
 
                 if not isinstance(data, list):
