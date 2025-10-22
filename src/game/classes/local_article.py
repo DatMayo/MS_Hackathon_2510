@@ -10,6 +10,10 @@ import random
 import json
 from typing import List, Optional
 from pathlib import Path
+from colorama import init, Fore, Style
+
+# Initialize colorama for colorful console output
+init(autoreset=True)
 
 from src.game.models.category import CategoryModel
 from src.game.models.article import ArticleModel
@@ -57,14 +61,14 @@ class ArticlesLocal:
                 data = json.load(file)
 
                 if not isinstance(data, list):
-                    print("Error: JSON data is not a list of articles")
+                    print(f"{Fore.RED}Error: JSON data is not a list of articles")
                     return False
 
                 for article in data:
                     # Validate required fields
                     if not isinstance(article, dict):
                         print(
-                            f"Warning: Skipping invalid article (not a dictionary): {article}"
+                            f"{Fore.YELLOW}Warning: Skipping invalid article (not a dictionary): {article}"
                         )
                         continue
 
@@ -73,7 +77,7 @@ class ArticlesLocal:
                         for key in ["title", "summary", "category", "is_truth"]
                     ):
                         print(
-                            f"Warning: Skipping article with missing required fields: {article}"
+                            f"{Fore.YELLOW}Warning: Skipping article with missing required fields: {article}"
                         )
                         continue
 
@@ -82,19 +86,19 @@ class ArticlesLocal:
                         article["summary"], str
                     ):
                         print(
-                            f"Warning: Skipping article with invalid title/summary types: {article}"
+                            f"{Fore.YELLOW}Warning: Skipping article with invalid title/summary types: {article}"
                         )
                         continue
 
                     if not isinstance(article["category"], str):
                         print(
-                            f"Warning: Skipping article with invalid category type: {article}"
+                            f"{Fore.YELLOW}Warning: Skipping article with invalid category type: {article}"
                         )
                         continue
 
                     if not isinstance(article["is_truth"], bool):
                         print(
-                            f"Warning: Skipping article with invalid is_truth type: {article}"
+                            f"{Fore.YELLOW}Warning: Skipping article with invalid is_truth type: {article}"
                         )
                         continue
 
@@ -102,23 +106,24 @@ class ArticlesLocal:
                     ArticlesLocal.local_articles.append(current_article)
 
                 if not ArticlesLocal.local_articles:
-                    print("Error: No valid articles found in JSON file")
+                    print(f"{Fore.RED}Error: No valid articles found in JSON file")
                     return False
 
                 return True
 
         except FileNotFoundError:
             print(
-                "Error: responses.json file not found. Please ensure the file exists in the correct location."
+                f"{Fore.RED}Error: responses.json file not found. Please ensure the file exists in the correct location."
             )
             return False
         except json.JSONDecodeError as e:
-            print(f"Error: Failed to parse JSON file: {e}")
+            print(f"{Fore.RED}Error: Failed to parse JSON file: {e}")
             return False
         except PermissionError:
-            print("Error: Permission denied when trying to read responses.json file")
+            print(f"{Fore.RED}Error: Permission denied when trying to read responses.json file")
+            return False
         except Exception as e:
-            print(f"Error loading articles: {e}")
+            print(f"{Fore.RED}Error loading articles: {e}")
             return False
 
     @staticmethod
@@ -151,16 +156,16 @@ class ArticlesLocal:
         # Input validation
         if not category or not hasattr(category, "name"):
             raise ValueError(
-                "Invalid category provided. Category must have a 'name' attribute."
+                f"{Fore.RED}Invalid category provided. Category must have a 'name' attribute."
             )
 
         if not isinstance(is_truth, bool):
-            raise ValueError("is_truth parameter must be a boolean value.")
+            raise ValueError(f"{Fore.RED}is_truth parameter must be a boolean value.")
 
         if len(ArticlesLocal.local_articles) == 0:
             success = ArticlesLocal.load_articles()
             if not success:
-                raise ValueError("Failed to load articles from file.")
+                raise ValueError(f"{Fore.RED}Failed to load articles from file.")
 
         # Generate a new list and filter truth and category
         filtered_list: list[ArticleModel] = []
@@ -173,7 +178,7 @@ class ArticlesLocal:
 
         if not filtered_list:
             raise IndexError(
-                f"No articles found for category '{category.name}' with is_truth={is_truth}"
+                f"{Fore.RED}No articles found for category '{category.name}' with is_truth={is_truth}"
             )
 
         return random.choice(filtered_list)

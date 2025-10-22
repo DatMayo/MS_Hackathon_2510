@@ -658,5 +658,455 @@
     "summary": "The Echoing Timehouses are a purported class of paranormal phenomena observed in secluded residential buildings in the rural province of Westvale. Reports include recurring echoes of conversations that did not occur, clocks that reset to dates prior to construction, and doors that appear to lead to temporally displaced rooms. Investigations conducted by the Westvale Parapsychology Society between 2002 and 2016 documented a pattern of activity peaking during meteor showers and during new moons. The phenomenon is hypothesized to result from resonant harmonic fields produced by antique clockworks interacting with subterranean geological features, though no consensus exists. Eyewitness accounts emphasize the emotional tone of the auditory phenomena, with witnesses reporting simultaneous feelings of nostalgia and unease. Despite limited controlled replication, the Echoing Timehouses have become a focal point in regional folklore, influencing architectural conservation discussions and sparking debates about the regulation of historical clockwork artifacts.",
     "category": "Paranormal",
     "is_truth": false
+  },
+  {
+    "title": "UFO sightings in outer space",
+    "summary": " These sightings have been claimed as evidence for extraterrestrial life by ufologists.  \nSome of the alleged sightings never occurred: science fiction writer Otto Binder perpetuated a hoax claiming Apollo 11 Commander Neil Armstrong had encountered UFOs during the Apollo mission.  UFO proponents see comments by astronauts or photos processed by NASA as one of the \"strongest bodies of evidence\" because they are considered to be of high trustworthiness; however, NASA Assistant Administrator for Legislative Affairs, Robert F.  Allnut, concluded in a 1970 letter, \"after fifteen years of manned space voyages including space stations and landing on the Moon, spacemen have brought back not a shred of evidence – verbal, photographic, or otherwise – for the existence of extraterrestrial spacecraft, or 'UFOs'. \"\nIn 2009, footage from NASA was posted on YouTube by ufologists which \"renew[ed] UFO conspiracy theories that the government is hiding knowledge about its interactions with intelligent life\" by relying on a \"lack of context\" to promote a \"collection of indistinct imagery and allegations\".  A number of the incidents were collected for an episode of the 2014 television series Are We Alone?",
+    "category": "UFO_sightings",
+    "is_truth": true
+  },
+  {
+    "title": "Meridian Triangle Light Event",
+    "summary": "Between March and May 1983, the Meridian Triangle Light Event was a series of nocturnal aerial illuminations observed over the Meridian Triangle region by a diverse set of witnesses. Witnesses described three interconnected, luminescent objects forming a triangular pattern that would pause, drift, and then accelerate in synchronized maneuvers. Radar operators and independent investigators collected data including radar echoes, photographs, and testimony, but no conventional aircraft or atmospheric phenomenon could fully explain the sequence. Some observers noted a silent approach and metallic textures, while others reported color changes from pale blue to emerald green, leading to a range of interpretations. In response, regional aviation authorities increased night-operations monitoring and researchers established a temporary repository for sightings, contributing to local ufology discussions. Although no definitive explanation emerged, the event is cited in later nocturnal phenomena studies and has shaped regional folklore, public interest, and the documentation practices for unexplained aerial sightings.",
+    "category": "UFO_sightings",
+    "is_truth": false
+  },
+  {
+    "title": "The Nashoba Ridge Lightform Event",
+    "summary": "The Nashoba Ridge Lightform Event is a reported aerial phenomenon that occurred in October 1987 over Nashoba Ridge, Massachusetts. Eyewitnesses described several disc-shaped objects emitting faint multicolored lights and traveling in tight formations at low altitude before they vanished. Local authorities conducted interviews and collected radar traces from a nearby air traffic control facility, but weather conditions and sparse instrumentation left the data inconclusive. A privately funded research team published a report proposing atmospheric reflections and non-ionizing radar echoes as a possible explanation, while another independent group argued for the involvement of unconventional aerial technology. The case has since been cited in regional ufology literature as a cautionary example of misperception and data limitations in sighting reports. Although no definitive conclusion has emerged, the Nashoba Ridge Lightform Event remains a reference point in discussions of ambiguous aerial phenomena and the challenges of corroborating eyewitness testimony.",
+    "category": "UFO_sightings",
+    "is_truth": false
+  },
+  {
+    "title": "Delta Echo Sequence",
+    "summary": "The Delta Echo Sequence refers to a cluster of nocturnal aerial phenomena observed across the Midwestern United States between August and September 1992. Eyewitnesses described a pattern of rapidly moving, multicolored lights forming transient triangular or circular arrays that persisted for several minutes. A formal inquiry conducted by the National Atmospheric Research Agency concluded that the observations could be explained by a combination of high-altitude reflections, refracted city lights, and conventional aircraft contrails under unusual meteorological conditions. Nevertheless, investigators noted anomalies in radar traces and several testimonies that could not be fully corroborated. Researchers and hobbyists produced competing interpretations, with some attributing the effects to unknown technologies while others favored natural or human-made sources. Today, the Delta Echo Sequence is frequently cited in discussions of unidentified aerial phenomena as an example of how ambiguous data can lead to diverging explanations.",
+    "category": "UFO_sightings",
+    "is_truth": false
+  },
+  {
+    "title": "The Larkspur Ridge Spiral Incident",
+    "summary": "On the night of September 13, 1984, residents of Larkspur Ridge reported a rotating, spiral-shaped light hovering above the forested slopes. Multiple witnesses described a detached ring of luminance that expanded and contracted in a counterclockwise motion. The incident drew attention from regional air traffic authorities, who logged several radar blips in the vicinity but could not correlate them with any conventional aircraft. A temporary field study conducted by the National Ufology Research Council concluded that the phenomena appeared to originate near the ridge's treeline and persisted for approximately forty minutes. Explanations proposed ranged from atmospheric refraction of a high-altitude satellite flare to a misidentified low-orbiting object, though none fully accounted for the observed rotational symmetry. Although no definitive conclusion was reached, the Larkspur Ridge Spiral Incident remains cited in studies of anomalous aerial phenomena as a case illustrating the challenges of real-time verification and witness consensus.",
+    "category": "UFO_sightings",
+    "is_truth": false
+  },
+  {
+    "title": "Alien abduction",
+    "summary": " People claiming to have been abducted are usually called \"abductees\" or \"experiencers\".  Most scientists and mental health professionals explain these experiences by factors such as suggestibility (e. g.  false memory syndrome), sleep paralysis, deception, and psychopathology.  Skeptic Robert Sheaffer sees similarity between some of the aliens described by abductees and those depicted in science fiction films, in particular Invaders From Mars (1953). Typical claims involve forced medical examinations that emphasize the subject's reproductive systems",
+    "category": "Alien_abduction",
+    "is_truth": true
+  },
+  {
+    "title": "Narrative of the abduction phenomenon",
+    "summary": " Proponents of the abduction phenomenon contend that this similarity is evidence of the veracity of the phenomenon as an objective reality, although this belief is disregarded by most scientists, who regard alien abduction as a purely psychological and cultural phenomenon. Skeptics of the abduction phenomenon contend that similarities between reports arise from commonalities rooted in human psychology and neurology or cast doubt on the presence of similarities between reports at all.  They note the evolving contents of abduction claims and the apparent effect of culture on the details of the narratives as evidence that the phenomenon is a purely subjective experience.  Skeptics also point out the likelihood of large numbers of hoaxes being present in the abduction literature. Believers assert that it is unlikely for hundreds of people to independently generate such similar narratives while apparently having no knowledge of each other's claims.  Some abduction investigators attempt to confirm the reality of events reported in abduction claims through observation or experimentation, although such efforts are generally dismissed as pseudoscientific by mainstream academics",
+    "category": "Alien_abduction",
+    "is_truth": true
+  },
+  {
+    "title": "Perspectives on the alien abduction phenomenon",
+    "summary": " The main differences between these perspectives lie in the credence ascribed to the claims.  Perspectives range from the assertion that all abductions are hoaxes to the belief that the claims are of objective happenings and separate from the consciousness of the claimants. Some researchers are intrigued by abduction phenomena, but hesitate to make definitive conclusions.  Harvard psychiatrist John E.  Mack, a leading authority on the spiritual or transformational effects of alleged alien abduction experiences, said, \"The furthest you can go at this point is to say there's an authentic mystery here.  And that is, I think, as far as anyone ought to go",
+    "category": "Alien_abduction",
+    "is_truth": true
+  },
+  {
+    "title": "Alien implants",
+    "summary": "In ufology, alien implants is a term used to describe physical objects allegedly placed in someone's body after they have been abducted by aliens. Claimed capabilities of the implants range from telepresence to mind control to biotelemetry (the latter akin to humans tagging wild animals for study).  As with UFO subjects in general, the idea of \"alien implants\" has seen very little attention from mainstream scientists.",
+    "category": "Alien_abduction",
+    "is_truth": true
+  },
+  {
+    "title": "The Kharon's Gate Abduction Complex",
+    "summary": "The Kharon's Gate Abduction Complex (KGAC) is a fictitious framework proposed by researchers to classify a cluster of alleged abduction narratives originating in the fictional town of Dryden Falls. The concept posits a recurring pattern of abductions tied to a repeated geographic locus known as the Gate. Researchers describe three core stages: pre-contact observations, abduction events with non-human emissaries, and post-contact phenomena including memory gaps and anxiety. The hypothesis has been debated, with critics arguing that the KGAC relies on cognitive biases and cultural storytelling rather than verifiable data. Proponents note that the complex offers a structured method for comparing similar accounts across times and regions, and suggests potential psychological and sociological mechanisms at work. The entry remains controversial and is treated as a fictional construct within the larger field of ufology studies.",
+    "category": "Alien_abduction",
+    "is_truth": false
+  },
+  {
+    "title": "The Asterion Abduction Archive",
+    "summary": "The Asterion Abduction Archive is a fictional corpus of extraterrestrial abduction reports compiled by the late-20th-century researcher Dr. Mara Ellison. According to the archive, abductors employ a recurring auditory cue described as a triadic tone to trigger memory gaps and dream recall suppression in witnesses. The entries span multiple continents and decades, presenting a coherent set of motifs that share timing, setting, and sensory detail. Proponents argue that the archive reveals a standardized abductee protocol involving sleep disruption, telepathic communication, and purported retrieval of biometric information. Critics contend that the archive relies on secondhand accounts and lacks verifiable primary sources, with some entries showing linguistic or cultural anachronisms. While cited within ufology circles as a vivid illustration of abduction narratives, mainstream scholars regard the work as a fictional construct used to analyze recurring motifs rather than evidence of real phenomena.",
+    "category": "Alien_abduction",
+    "is_truth": false
+  },
+  {
+    "title": "The Orion Corridor Abduction Phenomenon",
+    "summary": "The Orion Corridor Abduction Phenomenon refers to a cluster of abduction reports concentrated along a roughly defined geographic and electromagnetic corridor in the Orion Meridian region. Researchers note that accounts typically describe sudden shifts in time perception, brief sensory distortions, and later returned memories of unfamiliar environments. Field studies conducted between 2010 and 2023 documented a pattern in the timing of incidents, often aligning with local auroral activity and instrumental readings of low-frequency electromagnetic emissions. Explanations proposed in the literature range from cognitive retrofits of memory to micro-hypnotic induction, with no single hypothesis universally accepted. Proponents argue that the corridor may act as a resonant conduit for psychosocial triggers, while critics emphasize methodological issues and the lack of independent corroboration. The phenomenon, while controversial, has resonated in popular culture and has influenced regional folklore, museum exhibitions, and speculative science writing.",
+    "category": "Alien_abduction",
+    "is_truth": false
+  },
+  {
+    "title": "Cirrus-X Abduction Event",
+    "summary": "The Cirrus-X Abduction Event is the name given to a cluster of reported alien abduction incidents in the Cirrus Mountain region of northwestern North America during the early 1990s. Reports from witnesses describe recurring motifs such as missing time, telepathic communication, and examinations conducted by unidentified beings. Investigators noted that several encounters occurred near alpine shelters and along forest trails, with multiple witnesses claiming overlapping timelines. Scholarly analyses have proposed a range of explanations, including social-psychological drivers, collective memory effects, and, less plausibly, environmental factors such as electromagnetic anomalies. Physical traces associated with the events are inconsistent and largely inconclusive, leading many researchers to treat Cirrus-X as a contemporaneous abduction cluster rather than a substantiated contact event. Today the Cirrus-X Abduction Event is cited as a canonical case study in the study of modern abduction narratives and continues to influence regional folklore.",
+    "category": "Alien_abduction",
+    "is_truth": false
+  },
+  {
+    "title": "Trinisinghe manuscript",
+    "summary": " It belongs to the group of the five major lob phong (“powder erasing”) manuscripts.  The Trinisinghe manuscript is significant for providing the foundational knowledge required to understand number diagrams and calculations in the yantra system.  It also explains the origins of certain numbers and symbols that appear in yantras.   \nThe Trinisinghe manuscript consists of five key components: an homage to the teachers, the composition of the attharathasamongkhon (set of twelve auspicious numbers), the origins of this numerical system, methods of multiplication and division of the auspicious numbers, and instructions on how to use the Trinisinghe powders and related yantras.   \nCompared with other lob phong manuscripts, original copies of Trinisinghe are relatively rare.  In the National Library of Thailand, only nine manuscripts have been identified, with four of them representing distinct textual traditions, thus forming four versions",
+    "category": "Occult",
+    "is_truth": true
+  },
+  {
+    "title": "Isaac Newton's occult studies",
+    "summary": " Some of this could be considered occult.  Newton's scientific work may have been of lesser personal importance to him, as he placed emphasis on rediscovering the wisdom of the ancients.  Historical research on Newton's occult studies in relation to his science have also been used to challenge the disenchantment narrative within critical theory. Newton lived during the early modern period, when the educated embraced a world view different from that of later centuries.  Distinctions between science, superstition, and pseudoscience were still being formulated, and a devoutly Christian biblical perspective permeated Western culture. ",
+    "category": "Occult",
+    "is_truth": true
+  },
+  {
+    "title": "Paranormal",
+    "summary": "Paranormal events are purported phenomena described in popular culture, folklore, and other non-scientific bodies of knowledge, whose existence within these contexts is described as being beyond the scope of normal scientific understanding. Notable paranormal beliefs include those that pertain to extrasensory perceptions (for example, telepathy), and the pseudosciences of ghost hunting, cryptozoology, and ufology.\nProposals regarding the paranormal are different from scientific hypotheses or speculations extrapolated from scientific evidence because scientific ideas are grounded in empirical observations and experimental data gained through the scientific method. In contrast, those who argue for the existence of the paranormal explicitly do not base their arguments on empirical evidence but rather on anecdote, testimony and suspicion. The standard scientific models give the explanation that what appears to be paranormal phenomena is usually a misinterpretation, misunderstanding or anomalous variation of natural phenomena.",
+    "category": "Occult",
+    "is_truth": true
+  },
+  {
+    "title": "Numerical yantra",
+    "summary": "Numerical yantras (Thai: เลขยันต์) are a branch of Thai occultism (saiyasat) derived from Brahmanism, but also influenced by Buddhism. They are yantras drawn in the form of grids or line patterns containing numbers, characters, or images. These can be tattooed on the skin (sak yant) or inscribed on cloth, leather, wood, metal, and other surfaces. Thai numerical yantras from different regions were written using sacred scripts such as Lanna Tham, Isan Tham script, and Khmer script.",
+    "category": "Occult",
+    "is_truth": true
+  },
+  {
+    "title": "Magic (supernatural)",
+    "summary": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural beings and forces. It is a category into which have been placed various beliefs and practices sometimes considered separate from both religion and science.\nConnotations have varied from positive to negative at times throughout history. Within Western culture, magic has been linked to ideas of the Other, foreignness, and primitivism; indicating that it is \"a powerful marker of cultural difference\" and likewise, a non-modern phenomenon. During the late nineteenth and early twentieth centuries, Western intellectuals perceived the practice of magic to be a sign of a primitive mentality and also commonly attributed it to marginalised groups of people.",
+    "category": "Occult",
+    "is_truth": true
+  },
+  {
+    "title": "As above, so below",
+    "summary": " The paraphrase is based on one of several existing Latin translations of the Emerald Tablet, in which the second verse appears as follows:\n\nQuod est superius est sicut quod inferius, et quod inferius est sicut quod est superius. That which is above is like to that which is below, and that which is below is like to that which is above. The paraphrase is peculiar to this Latin version, and differs from the original Arabic, which reads \"from\" rather than \"like to\". Following its use by prominent modern occultists such as Helena P.  Blavatsky (1831–1891, co-founder of the Theosophical Society) and the anonymous author of the Kybalion (often taken to be William W.  Atkinson, 1862–1932, a pioneer of the New Thought movement), the paraphrase started to take on a life of its own, becoming an often cited motto in New Age circles",
+    "category": "Occult",
+    "is_truth": true
+  },
+  {
+    "title": "The Lumen Codex of Eldharth",
+    "summary": "Discovered in 1893 among the cellar archives of a defunct monastery in northern Sylvania, the Lumen Codex of Eldharth is a codex said to encode nocturnal visions through a system of glyphs. Scholars date the manuscript to the late medieval period, though radiocarbon analyses are inconclusive due to unclear papyrus fibers. According to the text, certain combinations of light and sound can induce altered states of perception described as 'nascent astral mapping'. Critics argue the manuscript bears stylistic parallels to late-Renaissance alchemical treatises, while others maintain it is a 19th-century hoax designed to exploit occult interest. Numerous lines describe ritual sequences that practitioners have interpreted as instructions for scrying, though no verifiable demonstrations have been recorded. The codex has inspired a small corpus of modern occult fiction and a dedicated scholarly debate about the role of material culture in the transmission of esoteric knowledge.",
+    "category": "Occult",
+    "is_truth": false
+  },
+  {
+    "title": "The Veiled Archivist Sigil",
+    "summary": "The Veiled Archivist Sigil is a fictional occult emblem described in contemporary trivia as having originated in late medieval European manuscript culture. The sigil is described as a central, all-seeing eye encircled by concentric rings of thorn-like sigils and small stars, all arranged to imply thresholds between memory and oblivion. Supposed marginal glosses in a clandestine 15th-century codex, the Codex Umbra, claim that the symbol opens pathways to hidden records within the mind of the reader. While scholars in the field of speculative magic treat the Codex Umbra as a modern fabrication, the motif has become a recurrent trope in occult fiction and role-playing lore. Within acknowledged esoteric canon, the sigil is often discussed as an archetype representing surveillance, memory, and the gatekeeping function of archives. Modern references are found in digital zines and indie games that borrow the symbol to evoke mystery, though there is no verifiable historical use beyond the fictional tradition.",
+    "category": "Occult",
+    "is_truth": false
+  },
+  {
+    "title": "The Grimoire of the Veiled Monolith",
+    "summary": "The Grimoire of the Veiled Monolith is a medieval-style occult manuscript purported to date to the late 15th century and is associated with a legendary society known as the Order of the Veil. The manuscript is described as containing Latin invocations, ciphered diagrams, and marginal glosses that allegedly map a thaumaturgic ritual circuit across seven sigil matrices. Scholars have debated its provenance, with some tracing its origin to a vanished scriptorium in the Alpine foothills and others suggesting later fabrication by 19th-century occultists. Structurally, the text alternates between ritual invocations and geometric schematics that purportedly align with lunar cycles and planetary hours. In modern occult circles the grimoire has been cited as a source for the so-called Veil Gate rites and has influenced several ceremonial systems in fiction and esotericism. Despite extensive manuscript studies and forensic testing, no consensus has been reached regarding its authenticity, and the work remains a focal point for discussions on the cultural reception of esoteric literature.",
+    "category": "Occult",
+    "is_truth": false
+  },
+  {
+    "title": "The Lumenomantic Codex",
+    "summary": "The Lumenomantic Codex is a hypothetical 17th-century grimoire attributed to a clandestine order known as the Noctis Assembly. It is said to detail methods for manipulating luminal currents through sigils traced in silver and through celestial charts encoded with arcane numerology. Modern scholarship generally treats the codex as a product of 19th-century occult revivalism or a late manuscript assembled from earlier fragments. Its central doctrine emphasizes attuning personal will to nocturnal energies via breathwork, steady gaze, and visualization of light flowing through the body. Critics note anachronistic language and inconsistencies in provenance, while proponents claim it preserves a long-hidden lineage of nocturnal knowledge. Despite questions about its authenticity, the codex has influenced contemporary ritual practice, particularly in sigil crafting and meditative disciplines practiced by small esoteric groups.",
+    "category": "Occult",
+    "is_truth": false
+  },
+  {
+    "title": "Nexavir",
+    "summary": "Nexavir is an unapproved drug supplied as an injection composed of peptides and amino acids derived from pig liver. It has been marketed to treat skin conditions such as acne, inflammation, and edema.  This product has not been found by the FDA to be safe and effective, and the labeling has not been approved by them.  Nexavir was formerly known as Kutapressin.\n\n\n== References ==",
+    "category": "Alternative_medicine",
+    "is_truth": true
+  },
+  {
+    "title": "Honey packet",
+    "summary": "A honey packet is a honey-based dietary supplement sold in single-serve sachets, marketed primarily for male libido and endurance. The product has been condemned by health experts regarding health issues and complications.",
+    "category": "Alternative_medicine",
+    "is_truth": true
+  },
+  {
+    "title": "Dorn method",
+    "summary": "The Dorn method is a form of manual, holistic alternative therapy used to correct misalignments in the spinal column and other joints. \nDuring a treatment, the practitioner palpates the patient's spine. If any 'unbalanced' areas are found, possible underlying misalignments are palpated with gentle pressure using the thumb or hand against the spinous processes, while the patient enacts guided movements such as swinging the leg or arms to distract the muscles' inertia; this is similar to the principle of mechanics known as 'counter pressure'. In case of pain, the patient is advised to stop the procedure in order to avoid any damage to the body.\n\n\n== References ==",
+    "category": "Alternative_medicine",
+    "is_truth": true
+  },
+  {
+    "title": "Acupuncture",
+    "summary": " Acupuncture is a pseudoscience; the theories and practices of TCM are not based on scientific knowledge, and it has been characterized as quackery. There is a range of acupuncture technological variants that originated in different philosophies, and techniques vary depending on the country in which it is performed.  However, it can be divided into two main foundational philosophical applications and approaches; the first being the modern standardized form called eight principles TCM and the second being an older system that is based on the ancient Daoist wuxing, better known as the five elements or phases in the West.  Acupuncture is most often used to attempt pain relief, though acupuncturists say that it can also be used for a wide range of other conditions.  Acupuncture is typically used in combination with other forms of treatment. The global acupuncture market was worth US$24",
+    "category": "Alternative_medicine",
+    "is_truth": true
+  },
+  {
+    "title": "Functional medicine",
+    "summary": " At its essence, it is a rebranding of complementary and alternative medicine (CAM), and as such is pseudoscientific, and has been described as a form of quackery. In the United States, FM practices have been ruled ineligible for course credits by the American Academy of Family Physicians because of concerns they may be harmful. Functional medicine was created by Jeffrey Bland, who founded The Institute for Functional Medicine (IFM), which is based in the U. S.  state of Washington, in the early 1990s as part of one of his companies, HealthComm.  IFM, which promotes functional medicine, became a registered non-profit in 2001",
+    "category": "Alternative_medicine",
+    "is_truth": true
+  },
+  {
+    "title": "Human placentophagy",
+    "summary": "g. , cooked, dried, steeped in liquid) form\".  Placentophagy can be divided into two categories, maternal placentophagy and non-maternal placentophagy. While there are several anecdotes of different cultures practicing placentophagy in varying contexts, maternal placentophagy started in the US in the 1970s, with little to no evidence of its practice in any traditional or historic culture.  Midwives and alternative-health advocates in the U. S",
+    "category": "Alternative_medicine",
+    "is_truth": true
+  },
+  {
+    "title": "Aureliaean Meridian Tuning (AMT) Therapy",
+    "summary": "Aureliaean Meridian Tuning, abbreviated AMT, is a contemporary system of energy-based therapy developed in the late 2010s. Practitioners claim that it balances subtle body energies by using a combination of manual palpation, rhythmic sonic gestures, and intention-setting within a calibrated meridian map. Training involves a modular curriculum with hands-on workshops and theoretical modules on biophoton fields and psycho-neuroimmunology, though peer-reviewed evidence remains limited. Supporters report improvements in stress, sleep quality, and chronic musculoskeletal discomfort based on subjective reports and small pilot studies. Critics argue that the framework relies on unfalsifiable premises and that observed outcomes could be attributable to non-specific therapeutic effects and placebo. Despite ongoing debate, AMT has inspired several regional clinics and an online community of practitioners who publish case notes and reflective essays.",
+    "category": "Alternative_medicine",
+    "is_truth": false
+  },
+  {
+    "title": "Meridianic Resonance Therapy",
+    "summary": "Meridianic Resonance Therapy (MRT) is a fictional modality within the field of alternative medicine that posits a biophysical energy network aligned with conventional meridians. The practice asserts that specific resonant frequencies can be used to recalibrate disruptions in this energy grid and thereby influence organ function and systemic balance. MRT involves an assessment phase using a handheld sensor array to map perceived energy flow, followed by treatment sessions in which the practitioner applies a wand-like device emitting calibrated acoustic and optical stimuli while coinciding with breathing patterns. The claimed mechanisms include modulation of autonomic tone, improvement of microcirculation, and harmonization of circadian rhythms, though these mechanisms remain speculative and are not supported by widely accepted physiological models. Enthusiasts report subjective improvements in sleep quality, pain perception, and general wellbeing, and a few small-scale studies have described safe tolerability and signals of benefit, but rigorous randomized trials are lacking. MRT remains controversial within the broader medical community, being criticized for methodological weaknesses and lack of reproducible results, while a small cadre of practitioners continues to promote it as a complementary approach.",
+    "category": "Alternative_medicine",
+    "is_truth": false
+  },
+  {
+    "title": "Lumenic Resonance Therapy",
+    "summary": "Lumenic Resonance Therapy is a fictional alternative medicine modality developed in the late 1990s by researchers in a coastal city. The technique centers on a series of crystal-tuned panels paired with tactile electrodes to purportedly align the body's energy lumens with ambient electromagnetic fields. Practitioners claim that balancing these lumens can improve sleep, reduce stress, and enhance immune response, though evidence is largely anecdotal. Standard sessions last about 45 minutes and involve a quiet room, a lighted panel, and guided breathing exercises. Clinical researchers have published cautious reviews noting a lack of robust randomized trials and emphasize that any observed benefits may be attributable to placebo effects. Despite skepticism from mainstream medicine, Lumenic Resonance Therapy has gained a small following among wellness centers and has spawned various training programs and consumer devices.",
+    "category": "Alternative_medicine",
+    "is_truth": false
+  },
+  {
+    "title": "Luminetic Resonance Therapy",
+    "summary": "Luminetic Resonance Therapy (LRT) is a fictional complementary medicine modality that purports to modulate physiological processes through patterned light exposure combined with binaural acoustics. Proponents describe it as a noninvasive approach to influence circadian rhythms, mood regulation, and stress responses. According to the fictional literature, practitioners apply a light-emitting device to the skin and guide patients through synchronized breathing during 20 to 40 minute sessions. The method was first proposed by Dr. Meridian Kato in the fictional Institute for Biophotonic Therapies, who claimed measurable changes in autonomic markers after several sessions. Critical reviews in the imagined Journal of Alternative Medical Hypotheses emphasize methodological shortcomings, small sample sizes, and a lack of independent replication. Despite limited consensus within the scientific community, LRT has persisted in certain wellness clinics and consumer devices seeking to combine light therapy with sound-based relaxation.",
+    "category": "Alternative_medicine",
+    "is_truth": false
+  },
+  {
+    "title": "Michael Cremo",
+    "summary": " Cremo (born July 15, 1948), also known by his devotional name Drutakarmā dāsa, is an American independent researcher who describes himself as a Vedic creationist and an \"alternative archeologist. \" He argues that humans have lived on Earth for millions of years.  Based on artifacts allegedly found in the Eocene auriferous gravels of Table Mountain, California and discussed in his book Forbidden Archeology, Cremo argues for the existence of modern humans on Earth as early as 30 to 40 million years ago.  Forbidden Archeology, which he wrote with Richard L.  Thompson, has attracted criticism from mainstream scholars, who describe it as pseudoscientific. ",
+    "category": "Pseudoscience",
+    "is_truth": true
+  },
+  {
+    "title": "Emotional Freedom Techniques",
+    "summary": " EFT draws on various theories of alternative medicine – including acupuncture, neuro-linguistic programming, energy medicine, and Thought Field Therapy (TFT).  EFT also combines elements of exposure therapy, cognitive behavioral therapy and somatic stimulation.  It is best known through Gary Craig's EFT Handbook, published in the late 1990s, and related books and workshops by a variety of teachers.   EFT and similar techniques are often discussed under the umbrella term \"energy psychology\". Advocates claim that the technique may be used to treat a wide variety of physical and psychological disorders, and as a simple form of self-administered therapy.  The Skeptical Inquirer describes the foundations of EFT as \"a hodgepodge of concepts derived from a variety of sources, [primarily] the ancient Chinese philosophy of chi, which is thought to be the 'life force' that flows throughout the body",
+    "category": "Pseudoscience",
+    "is_truth": true
+  },
+  {
+    "title": "Interdimensional UFO hypothesis",
+    "summary": "The hypothesis has been advanced by ufologists such as Meade Layne, John Keel, J.  Allen Hynek, and Jacques Vallée.   Proponents of the interdimensional hypothesis argue that UFOs are a modern manifestation of a phenomenon that has occurred throughout recorded human history, which in prior ages were ascribed to mythological or supernatural creatures.  \nJeffrey J.  Kripal, Chair in Philosophy and Religious Thought at Rice University, writes: \"this interdimensional reading, long a staple of Spiritualism through the famous 'fourth dimension', would have a very long life within ufology and is still very much with us today\". ",
+    "category": "Pseudoscience",
+    "is_truth": true
+  },
+  {
+    "title": "Drug fraud",
+    "summary": "Drug fraud is a type of fraud in which drugs, legal or illegal, are cut or altered in such a way that diminishes their value below that which they are sold for.",
+    "category": "Pseudoscience",
+    "is_truth": true
+  },
+  {
+    "title": "Dysaesthesia aethiopica",
+    "summary": "In psychiatry, dysaesthesia aethiopica (literally \"Ethiopian bad feeling\", \"black bad feeling\") was an alleged mental illness described by American physician Samuel A. Cartwright in 1851, which proposed a theory for the cause of laziness among slaves. Today, dysaesthesia aethiopica is not recognized as a disease, but instead considered an example of pseudoscience, and part of the edifice of scientific racism.",
+    "category": "Pseudoscience",
+    "is_truth": true
+  },
+  {
+    "title": "Mars effect",
+    "summary": " This controversial finding was first reported by the French psychologist and \"neo-astrologer\" Michel Gauquelin.   In his book L'influence des astres (\"The Influence of the Stars\", 1955),  Gauquelin suggested that a statistically significant number of sports champions were born just after the planet Mars rises or culminates.  He also divided the plane of the ecliptic into twelve sectors, identifying two \"key\" sectors of statistical significance. Gauquelin's work was accepted by the psychologist Hans Eysenck among others but later attempts to validate the data and replicate the effect have produced uneven results, chiefly owing to disagreements over the selection and analysis of the data set.  Since the phenomenon in question depends upon the daily rotation of the Earth, the availability and accuracy of time and place of birth data is crucial to such studies, as is the criterion of \"eminence\".  Later research claims to explain the Mars effect by selection bias, favouring champions who were born in a key sector of Mars and rejecting those who were not from the sample",
+    "category": "Pseudoscience",
+    "is_truth": true
+  },
+  {
+    "title": "Chronoacoustic Resonance Healing",
+    "summary": "Chronoacoustic Resonance Healing is a pseudoscientific modality claimed to modulate biological rhythms through tuning of inaudible sound frequencies with the body's internal clock. Developed by a small group of alternative medicine enthusiasts in the early 2010s, the approach asserts that resonance maps can entrain neural, endocrine, and immune processes. Practitioners typically employ a device that emits a spectrum of tones while clients perform synchronized breathing and gentle movement. Supporters report improved sleep, energy, and mood, but these claims are primarily anecdotal and lack rigorous peer-reviewed evidence. The method has been criticized by mainstream scientists for lacking plausible mechanisms and for using non-reproducible results. Despite skepticism, Chronoacoustic Resonance Healing maintains a presence online and in wellness circles, where proponents continue to publish testimonials and informal demonstrations.",
+    "category": "Pseudoscience",
+    "is_truth": false
+  },
+  {
+    "title": "Chronoacoustic Resonance Theory",
+    "summary": "Chronoacoustic Resonance Theory is a pseudoscientific framework that claims biological systems can resonate with inaudible sonic frequencies linked to circadian and ultradian cycles. Proponents assert the existence of a so-called tempo-field that can entrain cellular processes, theoretically guiding gene expression and metabolic rhythms through external soundscapes. According to the theory, devices called temporal transducers can selectively modulate mood, memory consolidation, and sleep architecture by tuning resonance parameters. The claim relies on vague correlations and lacks reproducible experimental results, with critics pointing to methodological flaws and misinterpretation of established circadian biology. Originating in fringe circles in the early 2010s, the concept spread through self-published papers and online communities that blend music theory with speculative biology. Mainstream science does not accept Chronoacoustic Resonance Theory, and reviews classify it as pseudoscience because the core mechanisms are unsupported and no validated clinical outcomes have been demonstrated.",
+    "category": "Pseudoscience",
+    "is_truth": false
+  },
+  {
+    "title": "Luminal Resonance Mapping",
+    "summary": "Luminal Resonance Mapping is a proposed framework for diagnosing mental states by measuring purported 'luminal resonance' patterns in the brain using specialized handheld crystals. Developed in the early 2000s by a fictional researcher Dr. Ilya Kordova, Luminal Resonance Mapping posits that consciousness correlates with patterns in a proposed luminal field that permeates human tissue. Proponents claim that scanning with proprietary equipment detects resonance frequencies that allegedly correlate with emotional states, memory recall, and intuitive judgments. Critics argue that the theory lacks empirical support, reproducibility, and a coherent physical mechanism, and point to standard neuroimaging data that contradict some claimed correlations. Several controlled tests published in fringe journals reportedly failed to replicate results, leading mainstream scientists to classify the approach as pseudoscience. Despite the controversy, Luminal Resonance Mapping has influenced several wellness practices and chart-based self-help traditions that blend meditation with decorative metaphysical devices.",
+    "category": "Pseudoscience",
+    "is_truth": false
+  },
+  {
+    "title": "Aetheric Resonance Therapy",
+    "summary": "Aetheric Resonance Therapy (ART) is a purported pseudoscientific modality that claims to repair health by realigning bodily energy fields with external resonant frequencies. Proponents propose that the body emits a spectrum of subtle energies, whose harmony is disrupted in disease states, and that therapeutic devices can restore balance by emitting targeted frequencies. Treatments often involve contact or non-contact devices, with practitioners guiding patients through breathing, visualization, and intention to enhance the purported resonance. The method is widely regarded by mainstream science as lacking reproducible evidence, with most studies failing to demonstrate specific biological effects beyond placebo. Nevertheless, ART maintains a dedicated following and is marketed in alternative health circles, sometimes alongside other energy-based therapies. Critics caution that the terminology mirrors physics and neurobiology but note that the proposed mechanisms have not been demonstrated and remain inconsistent with established biomedical understanding.",
+    "category": "Pseudoscience",
+    "is_truth": false
+  },
+  {
+    "title": "QAnon",
+    "summary": " QAnon centers on fabricated claims made by an anonymous individual or individuals known as \"Q\".  Those claims have been relayed and developed by online communities and influencers.  Their core belief is that a cabal of Satanic, cannibalistic child molesters in league with the deep state is operating a global child sex trafficking ring and that Donald Trump is secretly leading the fight against them.  QAnon has direct roots in Pizzagate, another conspiracy theory that appeared on the Internet one year earlier, but also incorporates elements of many different conspiracy theories and unifies them into a larger interconnected theory.  QAnon has been described as a cult. During the first presidency of Donald Trump, QAnon followers believed the administration would conduct arrests and executions of thousands of members of the cabal on a day known as \"the Storm\" or \"the Event\"",
+    "category": "Fringe_theories",
+    "is_truth": true
+  },
+  {
+    "title": "Khazar hypothesis of Ashkenazi ancestry",
+    "summary": " It is still sometimes used in antisemitic conspiracy theories and in various anti-Zionist approaches.  The hypothesis draws on medieval sources such as the Khazar Correspondence, according to which at some point in the 8th–9th centuries, a small number of Khazars were said by Judah Halevi and Abraham ibn Daud to have converted to Rabbinic Judaism.  The hypothesis also postulates that after collapse of the Khazar empire, the Khazars fled to Eastern Europe and made up a large part of the Jews there.   The scope of the conversion within the Khazar Khanate remains uncertain, but the evidence used to tie the subsequent Ashkenazi communities to the Khazars is meager and subject to conflicting interpretations. Speculation that Europe's Jewish population originated among the Khazars has persisted for two centuries, from at least as early as 1808.  In the late 19th century, Ernest Renan and other scholars speculated that the Ashkenazi Jews of Europe originated among refugees who had migrated from the collapsed Khazarian Khanate westward into Europe",
+    "category": "Fringe_theories",
+    "is_truth": true
+  },
+  {
+    "title": "A Verdade Sufocada",
+    "summary": "The book presents Ustra's version of the left-wing armed struggle in Brazil during the military dictatorship, as well as recounting his experiences as head of DOI-CODI, one of Organs executing agencies of political repression, in which opponents of the dictatorship were tortured and murdered.  According to Ustra and his family, the book was boycotted by bookstores at the time of release and the family needed to finance their print runs because of publishers' denials.  The book received attention after being quoted by Jair Bolsonaro during his vote for Dilma Rousseff's Impeachment in 2016.  In the weekly ranking of Folha de S. Paulo on June 4, 2016, the work was the sixth best-selling nonfiction book in Brazil.  In 2018, it reached its 14th edition",
+    "category": "Fringe_theories",
+    "is_truth": true
+  },
+  {
+    "title": "Synchromysticism",
+    "summary": "Synchromysticism is the practice of attributing mystical or esoteric significance to coincidences. The word, a portmanteau of synchronicity and mysticism, was coined by Jake Kotze in August 2006. Synchromysticism has been described as a phenomenon \"existing on the fringe of areas already considered fringe\". Steven Sutcliff and Carole Cusack describe synchromysticism as \"part artistic practice, part spiritual or metaphysical system, part conspiracy culture\", while Jason Horsley describes it as \"a form of postmodern animism\" that \"combines Jung's notion of meaningful coincidences with the quest for the divine, or self-actualization through experience of the divine.\"",
+    "category": "Fringe_theories",
+    "is_truth": true
+  },
+  {
+    "title": "Revisionist school of Islamic studies",
+    "summary": "Until the early 1970s, non-Muslim Islamic scholars, while not accepting accounts of divine intervention, accepted Islam's origin story \"in most of its details\", and accepted the reliability of its traditional literary sources – tafsir (commentaries on the Quran), hadith (accounts of what the Islamic prophet Muhammad approved or disapproved of), and sira (biographies of Muhammad). Revisionists instead use a \"source-critical\" approach to this literature, as well as studying relevant archaeology, epigraphy, numismatics and contemporary non-Arabic literature.  They believe that those methodologies provide \"hard facts\" and an ability to crosscheck, and that traditional Islamic accounts, written 150 to 250 years after Muhammad, are/were subject to biases of and embellishments by the authors and transmitters. The school is thought to have originated in the 1970s and includes (or included) scholars such as John Wansbrough and his students Andrew Rippin, Norman Calder, G.  R.  Hawting, Patricia Crone and Michael Cook, as well as Günter Lüling, Yehuda D",
+    "category": "Fringe_theories",
+    "is_truth": true
+  },
+  {
+    "title": "African heritage of presidents of the United States",
+    "summary": "This article includes information on the African heritage of presidents of the United States, together with information on unsubstantiated claims that certain presidents of the United States had African ancestry. (All Homo sapiens descend from ancestors on the African continent, but \"African heritage\" here means descent from sub-Saharan Africans in roughly the past 500 years.)",
+    "category": "Fringe_theories",
+    "is_truth": true
+  },
+  {
+    "title": "Chronoacoustic Resonance Hypothesis",
+    "summary": "The Chronoacoustic Resonance Hypothesis (CARH) is a fringe theory proposing that certain subterranean cavities act as resonant amplifiers for low-frequency acoustic waves, creating conditions that allegedly influence localized temporal perception and measurements. Proponents argue that anomalies in dating results, stratigraphy, and eyewitness testimonies around caves and megalithic sites can be attributed to these resonant interactions rather than established geochronology. The theory posits a coupling between acoustic modes and weak geoelectric fields that purportedly induces slight phase shifts in radiometric dating signals, though no widely accepted mechanism has been demonstrated. Critics regard CARH as lacking robust empirical support and note that reported anomalies often disappear under controlled replication or are explained by calibration errors, contamination, or diagenetic processes. Despite skepticism, several small research groups have conducted field measurements using standardized sound-level meters, magnetometers, and dating controls, documenting noisy spectra in a limited number of caverns and sanctuaries. The ongoing debate highlights methodological challenges in fringe science, including the need for preregistration, transparent data sharing, and independent replication across laboratories.",
+    "category": "Fringe_theories",
+    "is_truth": false
+  },
+  {
+    "title": "Panarchic Resonance Theory",
+    "summary": "The Panarchic Resonance Theory is a proposed fringe cosmology and cognitive science hypothesis positing that human perception, memory, and consciousness are modulated by a planetary network of resonant frequencies. Proponents claim that these resonances arise from interactions among geomagnetic fields, atmospheric waves, and subterranean geophysical structures, collectively forming a global panarchic field. The theory asserts that this field can be amplified by specific architectural alignments, ancient structures, or modern resonance devices, leading to synchronized reports of unusual experiences. Supporters have cited anecdotal evidence such as correlated dream content and sudden memory retrieval during solar storms, but critics argue that such data are unverified and susceptible to placebo effects. Within the scientific community, the hypothesis is generally regarded as lacking falsifiable predictions and rigorous experimental validation, and it remains primarily within speculative fringe literature. Despite criticism, the Panarchic Resonance Theory has persisted in popular culture through online forums and pseudo-scientific publications, contributing to ongoing debates about the boundaries between science and speculation.",
+    "category": "Fringe_theories",
+    "is_truth": false
+  },
+  {
+    "title": "Etheric Substrate Hypothesis",
+    "summary": "The Etheric Substrate Hypothesis posits that a pervasive, non-material substrate underlies physical reality and interacts with conventional matter via resonant fields. Proponents claim that this substrate can store informational patterns beyond those captured by conventional quantum measurements. They argue that certain anecdotal phenomena, such as telepathic impressions or precognitive dreams, arise from couplings to this substrate at low-energy scales. Critics point out a lack of reproducible experimental evidence and that proposed mechanisms conflict with established physics. Some researchers have attempted to model the substrate as a network of quasi-stationary etheric nodes that interact with biological systems during sleep. The theory remains controversial, with mainstream physics treating it as speculative and unsupported by widely replicated data.",
+    "category": "Fringe_theories",
+    "is_truth": false
+  },
+  {
+    "title": "Leyline Interference Theory",
+    "summary": "The Leyline Interference Theory (LIT) is a fringe hypothesis proposing that alignments of megalithic and sacred sites generate planetary-scale electromagnetic interference fields that interact with geophysical resonances. Proponents claim these fields subtly modulate regional climate patterns and influence historical social dynamics by affecting human circadian rhythms and perception. The theory posits that certain stone structures amplify and channel subterranean electromagnetic pulses, creating a networked 'ley line' grid that extends beyond local geography. Empirical support is disputed; advocates point to correlations between site alignments, astronomical events, and climate anomalies, while critics note the data are sparse and non-replicable. Conventional science treats LIT as speculative and cites a lack of mechanistic explanations and predictive power, arguing that statistical coincidences and selection bias account for reported patterns. Despite widespread skepticism, the theory has influenced popular archaeology and cultural studies discussions of sacred geometry, and some researchers continue to explore potential interactions between geology and human perception within a broader fringe framework.",
+    "category": "Fringe_theories",
+    "is_truth": false
+  },
+  {
+    "title": "The Dancing Mania, an epidemic of the Middle Ages",
+    "summary": " The full translated English title is The Dancing Mania, an epidemic of the Middle Ages: from the sources for physicians and erudite non-physicians (in short, The Dancing Mania).  Hecker combines multiple sources about the dancing mania (also known as the dancing plague, choreomania, St.  John's dance, St.  Vitus' dance or tarantism), an epidemic which occurred mainly between the 14th and 17th centuries.  The dancing mania is described by the author as a historical case of mass hysteria, and Hecker further investigates the conditions and circumstances surrounding the dancing mania during the outbreaks.  The book has also been published in combination with The Black Death in the fourteenth century (1832) and The Sweating Sickness: A medical contribution to the story of the fifteenth and sixteenth century (1834) in a book called The Epidemics of the Middle Ages by doctor August Hirsch in 1865 after Hecker's death",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": true
+  },
+  {
+    "title": "2012 phenomenon",
+    "summary": " This date was regarded as the end-date of a 5,126-year-long cycle in the Mesoamerican Long Count calendar, and festivities took place on 21 December 2012 to commemorate the event in the countries that were part of the Maya civilization (Mexico, Belize, Guatemala, Honduras and El Salvador), with main events at Chichén Itzá in Mexico and Tikal in Guatemala. Various astronomical alignments and numerological formulae were proposed for this date.  A New Age interpretation held that the date marked the start of a period during which Earth and its inhabitants would undergo a positive physical or spiritual transformation, and that 21 December 2012 would mark the beginning of a new era.  Others suggested that the date marked the end of the world or a similar catastrophe.  Scenarios suggested for the end of the world included the arrival of the next solar maximum; an interaction between Earth and Sagittarius A*, the supermassive black hole at the center of the Milky Way galaxy; the Nibiru cataclysm, in which Earth would collide with a mythical planet called Nibiru; or even the heating of Earth's core. Scholars from various disciplines quickly dismissed predictions of cataclysmic events as they arose",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": true
+  },
+  {
+    "title": "Folie à deux",
+    "summary": "The disorder, first conceptualized in 19th century French psychiatry by Charles Lasègue and Jules Falret, is also known as Lasègue–Falret syndrome.  Recent psychiatric classifications refer to the syndrome as shared psychotic disorder (DSM-4 – 297. 3) and induced delusional disorder (ICD-10 – F24), although the research literature largely uses the original name.  The same syndrome shared by more than two people may be called folie à trois ('three') or quatre ('four'); and further, folie en famille ('family madness') or even folie à plusieurs ('madness of several'). This disorder is not in the current, fifth edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5), which considers the criteria to be insufficient or inadequate.  DSM-5 does not consider Shared Psychotic Disorder (folie à deux) as a separate entity; rather, the physician should classify it as \"Delusional Disorder\" or in the \"Other Specified Schizophrenia Spectrum and Other Psychotic Disorder\" category",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": true
+  },
+  {
+    "title": "Social panic",
+    "summary": " According to Folk Devils and Moral Panics by Stanley Cohen,  the definition can be broken down to many different sections.  The sections, which were identified by Erich Goode and Nachman Ben-Yehuda in 1994, include concern, hostility, consensus, disproportionality, and volatility.  Concern, which is not to be mistaken with fear, is about the possible or potential threat.  Hostility occurs when an outrage occurs toward the people who were a part of the problem and agencies who are accountable.  These people are seen as the enemy since their behavior is viewed as a danger to society.  Consensus includes a distributed agreement that an actual threat is going to take place",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": true
+  },
+  {
+    "title": "Conversion disorder",
+    "summary": " Individuals diagnosed with CD presented with highly distressing neurological symptoms such as numbness, blindness, paralysis, or convulsions, none of which were consistent with a well-established organic cause and could be traced back to a psychological trigger.  CD is no longer a diagnosis in the WHO's ICD-11 or APA's DSM-5 and was superseded by functional neurologic disorder (FND), a similar diagnosis that notably removed the requirement for a psychological stressor to be present.  \nIt was thought that these symptoms arise in response to stressful situations affecting a patient's mental health.  Individuals diagnosed with conversion disorder have a greater chance of experiencing certain psychiatric disorders including anxiety disorders, mood disorders, and personality disorders compared to those diagnosed with neurological disorders.  \nConversion disorder was partly retained in the DSM-5-TR and ICD-11, but was renamed to functional neurological symptom disorder (FNSD) and dissociative neurological symptom disorder (DNSD), respectively.  FNSD covers a similar range of symptoms found in conversion disorder, but does not include the requirements for a psychological stressor to be present",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": true
+  },
+  {
+    "title": "Koro (disease)",
+    "summary": "  Koro is also known as shrinking penis, and was listed in the Diagnostic and Statistical Manual of Mental Disorders. The syndrome occurs worldwide, and mass hysteria of genital-shrinkage anxiety has a history in Africa, Asia and Europe.  In the United States and Europe, the syndrome is commonly known as genital retraction syndrome. The condition can be diagnosed through psychological assessment, along with physical examination to rule out genuine disorders of the genitalia that could be causing true retraction. The word was borrowed from Malay and means the head of a turtle (or tortoise), referring to how it looks when they retract their heads into their shells. ",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": true
+  },
+  {
+    "title": "The North Gables Mass Psychogenic Illness Outbreak",
+    "summary": "The North Gables Mass Psychogenic Illness Outbreak is a fictionalized case study of a localized outbreak of symptoms within a primary-school community in a coastal town. Observed symptoms included headaches, dizziness, nausea, and fainting spells reported by students and staff over a six-week period. Extensive investigations - medical, psychological, and sociocultural - failed to identify an organic cause, implicating psychogenic mechanisms such as suggestion, shared beliefs, and anxiety. Social dynamics, including peer influence and classroom clustering, were found to amplify and sustain the symptom pattern. Public health responses emphasized clear communication, symptom-focused education, and supportive counseling, which coincided with a decline in reported cases. Since its description, the case has been cited in discussions of mass psychogenic illness as an example of how cultural context and media narratives can shape collective health experiences.",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": false
+  },
+  {
+    "title": "Willowmere Contagion Event",
+    "summary": "Willowmere Contagion Event is a fictional case study of mass psychogenic illness (MPI) described in a hypothetical community event centered in the town of Willowmere. The outbreak began when multiple residents reported sudden dizziness, tingling, and fainting within a few weeks at a local school during a period of heightened social stress. Extensive medical evaluation found no infectious agent, toxin, or environmental exposure that could account for the reported symptoms, and objective examinations largely failed to corroborate the complaints. Epidemiological patterns showed strong clustering within social groups and a rapid spread of symptom reports through informal networks and local media. Analyses highlighted psychosocial drivers such as rumor propagation, collective anxiety about safety and performance, and the influence of social contagion on symptom amplification. Interventions cited include transparent communication from health authorities, psychosocial support, and the rapid restoration of normal routines, after which reported symptoms subsided.",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": false
+  },
+  {
+    "title": "Larchhaven High School Mass Psychogenic Illness Outbreak (2012)",
+    "summary": "The incident occurred in 2012 in the coastal town of Larchhaven, involving 27 students at a high school, plus teachers reporting similar symptoms. Symptoms included dizziness, nausea, headaches, paresthesias, and fainting episodes; onset was rapid within a few days. Medical evaluations failed to identify organic causes; no environmental toxin or pathogen consistently detected. Epidemiologic investigation suggested mass psychogenic illness triggered by social anxiety and exposure to a high-stress school exam period; media coverage amplified concern. Control measures included reassurance, removal of suspected sources, temporary postponement of exams, and counseling; communication strategies emphasized avoidance of sensational reporting. The episode subsided within two weeks with no lasting health effects; it has since been cited as a textbook example of MPI in rural communities and as a case study in risk communication.",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": false
+  },
+  {
+    "title": "The Willow Creek Hysteria",
+    "summary": "The Willow Creek Hysteria is a proposed case of mass psychogenic illness that occurred in Willow Creek High School and surrounding community in 1989. Initially, a handful of adolescent students reported episodes of fainting, headaches, and transient muscle weakness that occurred without an identifiable medical trigger. Medical evaluations, including neurological exams and toxin screens, failed to reveal organic pathology and physical examinations were largely normal. Over the course of several weeks, additional students and a subset of staff began reporting similar symptoms, though objective findings remained inconsistent with a true neurological disorder. Investigators determined that social factors, including classroom stress, rumor transmission, and a shared media narrative, likely contributed to the rapid spread of symptoms, consistent with mass psychogenic illness as defined in contemporary literature. The event concluded without lasting health effects, and subsequent reviews highlighted the importance of school communication and supportive interventions to mitigate recurrence; the Willow Creek case is frequently cited in textbooks as a paradigmatic instance of MPI in a close-knit community.",
+    "category": "Mass_psychogenic_illness",
+    "is_truth": false
+  },
+  {
+    "title": "Moose cavalry",
+    "summary": "Moose cavalry are military units of cavalrymen mounted on moose (AKA Eurasian elk, Alces alces alces) rather than the more usual horses.  Some sources state that in 17th-century Sweden Charles XI trialled the use of moose as a replacement for horses, which had to be imported, but this is disputed.  The use of moose cavalry by the Soviets in the  Winter War of 1939 and 1940 is also reported but seems to stem from a 2010 Popular Mechanics April Fools' Day article.",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "The Science of Illusion",
+    "summary": "\"The Science of Illusion\" is the twentieth episode of the first season of the American comedy television series Community. It aired in the United States on NBC on March 25, 2010.",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "Harry Whitlohn",
+    "summary": "Sir Harry Whitlohn was a spoof character who appeared as a \"castaway\" on the BBC Radio programme Desert Island Discs and was interviewed as though he were real, by the presenter Roy Plomley, on 1 April 1963 - April Fools' Day.\nWhitlohn was variously presented as a \"man of affairs, musician, mountaineer, and mystic\", an \"88-year-old mountaineer, mystic and spy\" and \"the only man living who had collaborated with Brahms\".\nIn reviewing the book \"Desert Island Discs: 70 Years of Castaways\" by Sean Magee for The Guardian in 2012, Stephen Moss wrote:\n\nPlomley's strong suit was his sense of the absurd, and his encounter with theatrical manager Sir Harry Whitlohn is especially memorable.\nThe role of Whitlohn was played by the actor Henry Sherek, himself a former castaway on the programme. The character was originally to be called \"Harry Whitlow\".\n\n\n== References ==",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "Fossil Fools Day",
+    "summary": " The name is a play on the term fossil fuels and April Fools' Day. Fossil Fools Day began in 2004 with coordinated actions across American and Canadian high schools and universities where they played over 125 coordinated April Fools' Day pranks centered around the dangers from using and harvesting fossil fuels.  One prank included a mock oil spill in a public fountain.  Subsequent Fossil Fools Days have been held in many cities around the world, and are generally organized by one or more environmental organizations with funding from Energy Action Coalition and Rising Tide.  These events oppose energy derived from fossil fuels, promote education about alternative sources of energy, and encourage support for climate justice, strong legislation, corporate responsibility and a clean renewable energy future.  Protests may also encourage citizens to do their part with lifestyle changes such as riding bikes, reducing electricity usage, and investing in solar or wind energy for their homes",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "So It's Come to This: A Simpsons Clip Show",
+    "summary": " It originally aired on Fox in the United States on April 1, 1993.  In the episode, Homer plays a series of practical jokes on Bart, and to get even, Bart shakes up a can of Homer's beer with a paint shaker.  Homer opens the can, resulting in a huge explosion that lands him in the hospital, where he goes into a coma.  At Homer's bedside, the Simpson family reminisce, mainly about moments relevant to Homer's life. The episode was written by Jon Vitti, and directed by Carlos Baeza.  This is The Simpsons' first clip show, and it features clips from the first three seasons of the series",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "Terrance and Phillip in Not Without My Anus",
+    "summary": " The 14th episode of the series overall, it originally aired on Comedy Central in the United States on April 1, 1998.  The episode follows the two title characters, a duo of Canadians who attempt to save their country from the dictator Saddam Hussein while performing repetitive toilet humor.  Unbeknownst to them, the plan was partially set up by their rival, Scott, a critic who is often displeased by their random jokes of flatulence.  The script was written by series co-creators Trey Parker and Matt Stone, along with writer Trisha Nixon. The episode was an elaborate April Fools' Day prank on South Park fans, who were waiting to learn the identity of Cartman's father after the cliffhanger ending of the first season finale \"Cartman's Mom Is a Dirty Slut\".  Angering viewers, the prank episode resulted in 2,000 e-mail complaints to Comedy Central within a week of the original broadcast",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "April Fools' Day",
+    "summary": "April Fools' Day or April Fool's Day (rarely called All Fools' Day) is an annual custom on the 1st of April consisting of practical jokes, hoaxes, and pranks. Jokesters often expose their actions by shouting \"April Fool[s]!\" at the recipient. Mass media can be involved with these pranks, which may be revealed as such the following day. The custom of setting aside a day for playing harmless pranks upon one's neighbor has been relatively common in the world historically.",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "Write-only memory (joke)",
+    "summary": "Write-only memory (WOM), the opposite of read-only memory (ROM), began as a humorous reference to a memory device that could be written to but not read, as there seemed to be no practical use for a memory circuit from which data could not be retrieved. However, it was eventually recognized that write-only memory also describes certain functionalities in microprocessor systems. The concept is still often used as a joke or euphemism for a failed memory device.\nThe first use of the term is generally attributed to Signetics, whose write-only memory literature, created in 1972 as in-house practical joke, is frequently referenced within the electronics industry, a staple of software engineering lexicons, and included in \"best hoaxes\" collections.",
+    "category": "April_Fools'_Day",
+    "is_truth": true
+  },
+  {
+    "title": "The Great April Fool's Engine",
+    "summary": "The Great April Fool's Engine is a fictional theoretical framework describing a coordinated global pattern of pranks that allegedly emerges around April Fools' Day. According to the legend, the Engine operates through a network of loosely affiliated prank communities that disseminate elaborate ruses via media, retail, and online platforms. Proponents of the theory claim that timing windows, message frameworks, and misdirection techniques are optimized to exploit cultural norms of surprise and ambiguity. Scholarly writers within the mythos attribute its origin to a purported 19th‑ or early 20th‑century codex attributed to a fictional society of jesters, though no verifiable source exists. Several celebrated episodes are described in association with the Engine, including staged product announcements, spoof corporate memos, and fabricated archival errors that are later revealed as hoaxes. In contemporary discussions of humor and media literacy, the Engine is treated as a case study in how ideas about collective play circulate, while remaining a constructed artifact of meme culture.",
+    "category": "April_Fools'_Day",
+    "is_truth": false
+  },
+  {
+    "title": "Aprilis Prank Archive",
+    "summary": "Established in 2003, the Aprilis Prank Archive is a fictional curatorial project dedicated to cataloging notable April Fools' Day pranks from around the world. The archive claims to document prank type, targets, sponsors, media coverage, and public reception, using a standardized metadata schema. According to its curators, the objective is to illuminate how cultural norms around humor are negotiated during April 1. The collection includes both historical hoaxes and contemporary media stunts, with entries cross-referenced to related folklore and media studies. Scholars argue that the archive reflects evolving notions of consent, ethics, and transparency in prank culture. The project remains popular among prank enthusiasts and media historians, though it remains entirely fictional.",
+    "category": "April_Fools'_Day",
+    "is_truth": false
+  },
+  {
+    "title": "The Larkline Hoax (April Fools' Day)",
+    "summary": "The Larkline Hoax refers to a historical pattern of coordinated pranks attributed to an informal network of printers, magnates, and observers that circulated on April Fools' Day in the late 19th and early 20th centuries. The hoax typically involved a supposedly groundbreaking invention or event with an elaborate fictional backstory, published across newspapers, pamphlets, and later radio segments. The term larkline is a neologism coined by a fictional journalist in 1899 to describe the hidden channels through which jokes traveled across cities. Although most hoaxes were clearly identified as hoaxes by the afternoon, some achieved lasting fame, influencing contemporary media skepticism and the development of editorial disclaimers. The Larkline Hoax left a lasting imprint on April Fools' rituals, including the practice of issuing false but harmless announcements followed by prompt corrections. Modern scholars examining the Larkline Hoax view it as a case study in cross-media prank propagation and the reception of meta-humor in public life.",
+    "category": "April_Fools'_Day",
+    "is_truth": false
+  },
+  {
+    "title": "The April Fools' Day Syndicate",
+    "summary": "The April Fools' Day Syndicate is a fictitious scholarly construct proposed as a transnational network that coordinates April 1 pranks. The supposed origin traces to early modern Europe, where printers allegedly used misdirection and hoax notices to increase readership. In this narrative, the syndicate developed a codified set of practices, including a 'tagged prank' cipher, staged performances in public spaces, and the annual 'Reveals Day' ritual. Although cited in popular culture guides, historians note there is no verifiable evidence for a formal organization by that name, and it is widely regarded as a folkloric invention. The topic has influenced several contemporary works of fiction and humor studies, contributing to a broader understanding of April Fools' Day as a ritual of social testing and role reversal. In modern discourse, the term is often used in museum labels and media discussions to illustrate the performative and social dynamics of prank culture, while scholars continue to debate its origins.",
+    "category": "April_Fools'_Day",
+    "is_truth": false
   }
 ]

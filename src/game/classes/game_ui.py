@@ -1,5 +1,10 @@
 import random
 import textwrap
+from colorama import init, Fore, Style
+
+# Initialize colorama for colorful console output
+init(autoreset=True)
+
 from src.config.settings import WIKI_MAX_DISPLAYED_CATEGORIES, CONSOLE_WIDTH
 from src.game.classes.category import Category
 from src.game.models.article import ArticleModel
@@ -26,7 +31,7 @@ class GameUI:
     @staticmethod
     def draw_welcome() -> None:
         GameUI.clear_screen()
-        print("Welcome to TruthPedia!\n")
+        print(f"{Fore.CYAN}Welcome to TruthPedia!\n")
 
     @staticmethod
     def clear_screen(lines: int = 100) -> None:
@@ -57,11 +62,11 @@ class GameUI:
         try:
             user_name = input("So tell me, what's your name? ").strip()
             if not user_name:
-                print("Please enter a valid name.")
+                print(f"{Fore.YELLOW}Please enter a valid name.")
                 return GameUI.get_player_name()
             return user_name
         except (KeyboardInterrupt, EOFError):
-            print("\nGoodbye!")
+            print(f"\n{Fore.CYAN}Goodbye!")
             exit(0)
 
     @staticmethod
@@ -72,10 +77,10 @@ class GameUI:
         This method shows the player what the game is about and how to play.
         """
         print(
-            "This game is about guessing the imposter summary.\n"
-            "You will choose a category and get 3 summaries of random pages.\n"
-            "1 out of the 3 is an imposter.\n"
-            "Are you smart enough to identify it?\n"
+            f"{Fore.WHITE}This game is about guessing the imposter summary.\n"
+            f"{Fore.WHITE}You will choose a category and get 3 summaries of random pages.\n"
+            f"{Fore.WHITE}1 out of the 3 is an imposter.\n"
+            f"{Fore.WHITE}Are you smart enough to identify it?\n"
         )
 
     @staticmethod
@@ -95,9 +100,9 @@ class GameUI:
             and displays the title and summary of the Fakenews article.
         """
         GameUI.clear_screen()
-        message = f"Well {user_name}, you are pretty brainwashed...\nYou've lost!"
+        message = f"{Fore.RED}Well {user_name}, you are pretty brainwashed...\nYou've lost!"
         print(message)
-        print("The following summary was the Fakenews:\n")
+        print(f"{Fore.YELLOW}The following summary was the Fakenews:\n")
         print(f"{ai_article['title']}")
         GameUI._wrap_text(f"{ai_article['summary']}")
         return message
@@ -119,9 +124,9 @@ class GameUI:
             Categories are selected without replacement to ensure variety.
         """
         GameUI.clear_screen()
-        print(f"Hello, {user_name}!")
+        print(f"{Fore.GREEN}Hello, {user_name}!")
         category_list: list[CategoryModel] = []
-        print("Here you have your choices:")
+        print(f"{Fore.WHITE}Here you have your choices:")
 
         while len(category_list) < category_count:
             random_cat = Category.get_random_category()
@@ -157,33 +162,33 @@ class GameUI:
                 ).strip()
 
                 if not user_input:
-                    print("Please enter a number.")
+                    print(f"{Fore.YELLOW}Please enter a number.")
                     continue
 
                 try:
                     user_selection = int(user_input)
                 except ValueError:
                     print(
-                        f"Please enter a valid number between 1 and {len(category_list)}"
+                        f"{Fore.RED}Please enter a valid number between 1 and {len(category_list)}"
                     )
                     continue
 
                 if user_selection < 1 or user_selection > len(category_list):
                     print(
-                        f"Please enter a valid number between 1 and {len(category_list)}"
+                        f"{Fore.RED}Please enter a valid number between 1 and {len(category_list)}"
                     )
                     continue
 
                 selected_category = category_list[user_selection - 1]
                 print(
-                    f"So you chose {selected_category.name}...\n"
-                    f"Indeed a wise choice! We'll prepare the summaries now...\n"
-                    f"Please wait... (eta: 15 seconds)"
+                    f"{Fore.GREEN}So you chose {selected_category.name}...\n"
+                    f"{Fore.GREEN}Indeed a wise choice! We'll prepare the summaries now...\n"
+                    f"{Fore.YELLOW}Please wait... (eta: 15 seconds)"
                 )
                 return selected_category
 
         except (KeyboardInterrupt, EOFError):
-            print("\nGoodbye!")
+            print(f"\n{Fore.CYAN}Goodbye!")
             exit(0)
 
     @staticmethod
@@ -201,26 +206,27 @@ class GameUI:
         """
         try:
             while True:
-                user_input = input("Choose the Fakenews!\nYour answer: ").strip()
+                print(f"{Fore.CYAN}Choose the Fakenews!")
+                user_input = input(f"{Fore.WHITE}Your answer: ").strip()
 
                 if not user_input:
-                    print("Please enter a number.")
+                    print(f"{Fore.YELLOW}Please enter a number.")
                     continue
 
                 try:
                     user_answer = int(user_input)
                 except ValueError:
-                    print("Please enter a valid number between 1 and 3")
+                    print(f"{Fore.RED}Please enter a valid number between 1 and 3")
                     continue
 
                 if user_answer < 1 or user_answer > 3:
-                    print("Please enter a valid number between 1 and 3")
+                    print(f"{Fore.RED}Please enter a valid number between 1 and 3")
                     continue
 
                 return user_answer
 
         except (KeyboardInterrupt, EOFError):
-            print("\nGoodbye!")
+            print(f"\n{Fore.CYAN}Goodbye!")
             exit(0)
 
     @staticmethod
@@ -258,20 +264,20 @@ class GameUI:
             total: Total number of articles
             console_width: Width of the console for formatting
         """
-        print(f"\n{'=' * console_width}")
-        print(f"Article {index} of {total}")
-        print(f"{'=' * console_width}")
+        print(f"\n{Fore.CYAN}{'=' * console_width}")
+        print(f"{Fore.CYAN}Article {index} of {total}")
+        print(f"{Fore.CYAN}{'=' * console_width}")
 
         # Wrap and print title
         wrapped_title = GameUI._wrap_text(article["title"])
-        print(f"Title: {wrapped_title}")
+        print(f"{Fore.WHITE}Title: {wrapped_title}")
 
         print()  # Empty line
 
         # Wrap and print summary
         wrapped_summary = GameUI._wrap_text(article["summary"])
-        print(f"Summary: {wrapped_summary}")
-        print(f"{'=' * console_width}\n")
+        print(f"{Fore.WHITE}Summary: {wrapped_summary}")
+        print(f"{Fore.CYAN}{'=' * console_width}\n")
 
     @staticmethod
     def print_articles(
@@ -297,22 +303,22 @@ class GameUI:
             raise ValueError("Articles must be provided as a list.")
 
         if not my_articles:
-            print("No articles to display.")
+            print(f"{Fore.YELLOW}No articles to display.")
             return None
 
         # Filter out invalid articles
         valid_articles = []
         for i, article in enumerate(my_articles):
             if not isinstance(article, dict):
-                print(f"Warning: Skipping invalid article at position {i + 1}")
+                print(f"{Fore.YELLOW}Warning: Skipping invalid article at position {i + 1}")
                 continue
             if "title" not in article or "summary" not in article:
-                print(f"Warning: Skipping article {i + 1} - missing title or summary")
+                print(f"{Fore.YELLOW}Warning: Skipping article {i + 1} - missing title or summary")
                 continue
             valid_articles.append(article)
 
         if not valid_articles:
-            print("No valid articles to display.")
+            print(f"{Fore.YELLOW}No valid articles to display.")
             return None
 
         console_width = CONSOLE_WIDTH
@@ -329,7 +335,7 @@ class GameUI:
             )
 
             # Show navigation/selection instructions
-            print("\nNavigation:")
+            print(f"\n{Fore.WHITE}Navigation:")
             available_answers: list[str] = []
             if current_index > 0:
                 available_answers.append("(P)revious")
@@ -341,13 +347,13 @@ class GameUI:
                 available_answers.append(f"(1-{total_articles}) Select this article")
                 # print(f"  (1-{total_articles}) Select this article")
             available_answers.append("(Q)uit")
-            print(" | ".join(available_answers))
+            print(f"{Fore.WHITE} | ".join(available_answers))
             # print("  (Q)uit")
 
             # Get user input
             while True:
                 try:
-                    choice = input("\nYour choice: ").strip().lower()
+                    choice = input(f"{Fore.WHITE}\nYour choice: ").strip().lower()
 
                     # Navigation
                     if choice in ["n", "next"] and current_index < total_articles - 1:
@@ -380,7 +386,7 @@ class GameUI:
                             )
                         valid_choices.extend(["q", "quit", "exit"])
                         print(
-                            f"Please enter a valid choice: {', '.join(valid_choices)}"
+                            f"{Fore.RED}Please enter a valid choice: {', '.join(valid_choices)}"
                         )
 
                 except (KeyboardInterrupt, EOFError):
@@ -400,15 +406,15 @@ class GameUI:
         """
         GameUI.clear_screen()
         trump_praise = [
-            f"TRUMPMENDOUS! {user_name}, you found the fake — nobody finds fakes better than you, believe me.",
-            f"YUGE win, {user_name}! Correct answer. The other options? Total disasters.",
-            f"Incredible job, {user_name}! Many people are saying this is the best guess they've ever seen.",
+            f"{Fore.GREEN}TRUMPMENDOUS! {user_name}, you found the fake — nobody finds fakes better than you, believe me.",
+            f"{Fore.GREEN}YUGE win, {user_name}! Correct answer. The other options? Total disasters.",
+            f"{Fore.GREEN}Incredible job, {user_name}! Many people are saying this is the best guess they've ever seen.",
         ]
 
         trump_inform = [
-            f"Fifteen seconds and we're right back—next round's going to be huge, believe me.",
-            f"Give it 15 seconds—then we hit the next round. People say it's going to be incredible.",
-            f"15 seconds and we roll again. Many, many people are saying it'll be the best yet.",
+            f"{Fore.YELLOW}Fifteen seconds and we're right back—next round's going to be huge, believe me.",
+            f"{Fore.YELLOW}Give it 15 seconds—then we hit the next round. People say it's going to be incredible.",
+            f"{Fore.YELLOW}15 seconds and we roll again. Many, many people are saying it'll be the best yet.",
         ]
 
         print(random.choice(trump_praise))
@@ -426,11 +432,11 @@ class GameUI:
             Uses humorous Trump-inspired victory messages to celebrate game completion.
         """
         trump_praise = [
-            f"Huge win {user_name}. Almost as good as mine. Almost.",
-            f"Tremendous job {user_name}. Everyone's talking. Mostly about me—and you.",
-            f"You won {user_name}. Big league. The best—besides me, of course.",
-            f"Legendary finish {user_name}. People are amazed. I'm impressed. That's rare.",
-            f"Victory! Massive. You and I—real winners. The best.",
+            f"{Fore.GREEN}Huge win {user_name}. Almost as good as mine. Almost.",
+            f"{Fore.GREEN}Tremendous job {user_name}. Everyone's talking. Mostly about me—and you.",
+            f"{Fore.GREEN}You won {user_name}. Big league. The best—besides me, of course.",
+            f"{Fore.GREEN}Legendary finish {user_name}. People are amazed. I'm impressed. That's rare.",
+            f"{Fore.GREEN}Victory! Massive. You and I—real winners. The best.",
         ]
         GameUI.clear_screen()
         print(random.choice(trump_praise))

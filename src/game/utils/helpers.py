@@ -105,7 +105,13 @@ def _fetch_and_add_articles(
         return  # Nothing to do
 
     print(f"Fetching {num_needed} new {article_type_label} articles...")
+
+    # *** THIS IS THE FIX: A patience limit for duplicates ***
+    max_consecutive_duplicates = 20
+
     for i in range(num_needed):
+        consecutive_duplicates_found = 0  # Reset for each new article we need
+
         while True:  # Keep trying until we get a unique, valid one
             try:
                 # Call the getter function (either wiki or AI)
@@ -125,8 +131,16 @@ def _fetch_and_add_articles(
                     time.sleep(api_delay)  # Politeness delay
                     break  # Success, exit inner 'while True'
                 else:
+                    # --- THIS IS THE MODIFIED LOGIC ---
                     print(f"  ! Duplicate found, retrying: {new_article['title'][:50]}...")
+                    consecutive_duplicates_found += 1
                     time.sleep(0.5)
+
+                    if consecutive_duplicates_found > max_consecutive_duplicates:
+                        print(f"  ! Found {max_consecutive_duplicates}+ duplicates in a row.")
+                        print(f"  ! Assuming category is exhausted of new {article_type_label} articles. Moving on.")
+                        return  # <-- THIS 'return' EXITS THE FUNCTION and stops fetching
+                    # --- END OF MODIFIED LOGIC ---
 
             except Exception as e:
                 print(f"  ! Error fetching {article_type_label} article: {e}. Retrying in {API_RETRY_DELAY}s...")

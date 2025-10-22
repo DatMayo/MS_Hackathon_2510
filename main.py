@@ -2,6 +2,11 @@
 Main entry point for the console-based quiz game.
 """
 import sys
+from colorama import init, Fore, Style
+
+# Initialize colorama for colorful console output
+init(autoreset=True)
+
 from src.config.settings import GAME_DEFAULT_ROUNDS
 from src.game.classes.game_ui import GameUI
 
@@ -42,10 +47,10 @@ def main():
 
                 if not ai_article:
                     #Get pre-generated fake article
-                    print("Error: Failed to generate fake article. Using pre-generated.")
+                    print(f"{Fore.YELLOW}Error: Failed to generate fake article. Using pre-generated.")
                     ai_article = ArticlesLocal.get_random_article(selected_category, False)
                     if not ai_article:
-                        print("Error: Failed to fetch pre-generated fake article.")
+                        print(f"{Fore.RED}Error: Failed to fetch pre-generated fake article.")
                 # Get real articles
                 articles: list[ArticleModel] = []
                 for attempt in range(2):
@@ -59,15 +64,15 @@ def main():
                         real_article = None
 
                         if real_article == "":
-                            print("Error: Failed to fetch real article from Wikipedia.")
+                            print(f"{Fore.YELLOW}Error: Failed to fetch real article from Wikipedia.")
                     except (ValueError, ConnectionError) as e:
-                        print(f"Warning: Failed to fetch real article (attempt {attempt + 1}): {e}")
+                        print(f"{Fore.YELLOW}Warning: Failed to fetch real article (attempt {attempt + 1}): {e}")
                         if attempt == 1:  # Last attempt
                             # Get real article from local
-                            print("Error: Unable to fetch articles from Wikipedia. Using pre-fetched.")
+                            print(f"{Fore.YELLOW}Error: Unable to fetch articles from Wikipedia. Using pre-fetched.")
                             real_article = ArticlesLocal.get_random_article(selected_category, True)
                             if not real_article:
-                                print("Error: Failed to fetch pre-generated real article.")
+                                print(f"{Fore.RED}Error: Failed to fetch pre-generated real article.")
                                 return
                     # Add real artice
                     articles.append(real_article)
@@ -82,12 +87,12 @@ def main():
                 # Display articles and get user answer
                 user_answer = GameUI.print_articles(articles, select_mode=True)
                 if user_answer is None:  # User chose to quit
-                    print("Game ended by user.")
+                    print(f"{Fore.CYAN}Game ended by user.")
                     return
 
                 # Check answer
                 if user_answer < 1 or user_answer > len(articles):
-                    print(f"Error: Invalid answer. Please select a number between 1 and {len(articles)}")
+                    print(f"{Fore.RED}Error: Invalid answer. Please select a number between 1 and {len(articles)}")
                     continue
 
                 user_answer_correct = GameUI.check_answer(articles[user_answer - 1])
@@ -103,12 +108,12 @@ def main():
                     GameUI.print_answer_correct(user_name)
 
             except (ValueError, IndexError) as e:
-                print(f"Error in round {current_round + 1}: {e}")
-                print("Skipping this round and continuing...")
+                print(f"{Fore.RED}Error in round {current_round + 1}: {e}")
+                print(f"{Fore.YELLOW}Skipping this round and continuing...")
                 continue
             except Exception as e:
-                print(f"Unexpected error in round {current_round + 1}: {e}")
-                print("Ending game due to unexpected error.")
+                print(f"{Fore.RED}Unexpected error in round {current_round + 1}: {e}")
+                print(f"{Fore.RED}Ending game due to unexpected error.")
                 return
 
         # Game completed successfully
@@ -116,10 +121,10 @@ def main():
             GameUI.print_user_won(user_name)
 
     except KeyboardInterrupt:
-        print("\n\nGame interrupted by user. Goodbye!")
+        print(f"\n\n{Fore.CYAN}Game interrupted by user. Goodbye!")
     except Exception as e:
-        print(f"Unexpected error starting game: {e}")
-        print("Please check your configuration and try again.")
+        print(f"{Fore.RED}Unexpected error starting game: {e}")
+        print(f"{Fore.RED}Please check your configuration and try again.")
         sys.exit(1)
 
 

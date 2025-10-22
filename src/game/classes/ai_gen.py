@@ -8,6 +8,11 @@ in a trivia game setting.
 
 import json
 from typing import Optional
+from colorama import init, Fore, Style
+
+# Initialize colorama for colorful console output
+init(autoreset=True)
+
 from openai import OpenAI
 
 from src.config.settings import OPENAI_API_KEY, WIKI_MAX_SENTENCE_LENGTH
@@ -62,7 +67,7 @@ class FakeNewsGenerator:
             )
 
             if not response.choices or not response.choices[0].message.content:
-                print("Warning: Empty response from OpenAI API")
+                print(f"{Fore.YELLOW}Warning: Empty response from OpenAI API")
                 return None
 
             data = json.loads(response.choices[0].message.content)
@@ -70,7 +75,7 @@ class FakeNewsGenerator:
             # Validate required fields
             if not data.get("title") or not data.get("summary"):
                 print(
-                    "Warning: Incomplete response from OpenAI API - missing title or summary"
+                    f"{Fore.YELLOW}Warning: Incomplete response from OpenAI API - missing title or summary"
                 )
                 return None
 
@@ -83,10 +88,10 @@ class FakeNewsGenerator:
             return article
 
         except json.JSONDecodeError as e:
-            print(f"Error: Failed to parse JSON response from OpenAI API: {e}")
+            print(f"{Fore.RED}Error: Failed to parse JSON response from OpenAI API: {e}")
             return None
         except Exception as e:
-            print(f"API Error: {e}")
+            print(f"{Fore.RED}API Error: {e}")
             return None
 
     @staticmethod
@@ -111,13 +116,13 @@ class FakeNewsGenerator:
         # Input validation
         if not category or not isinstance(category, str):
             print(
-                "Error: Invalid category provided. Category must be a non-empty string."
+                f"{Fore.RED}Error: Invalid category provided. Category must be a non-empty string."
             )
             return None
 
         if not OPENAI_API_KEY:
             print(
-                "Error: OPENAI_API_KEY not found. Please configure your OpenAI API key."
+                f"{Fore.RED}Error: OPENAI_API_KEY not found. Please configure your OpenAI API key."
             )
             return None
 
@@ -125,5 +130,5 @@ class FakeNewsGenerator:
             client = OpenAI(api_key=OPENAI_API_KEY)
             return FakeNewsGenerator._generate_from_api(client, category)
         except Exception as e:
-            print(f"Error: Failed to initialize OpenAI client: {e}")
+            print(f"{Fore.RED}Error: Failed to initialize OpenAI client: {e}")
             return None
